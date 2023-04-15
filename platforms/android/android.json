@@ -10,25 +10,25 @@
           "NSCameraUsageDescription": [
             {
               "xml": "<string>Enables us to access your camera to take photos for your profile or of your van.</string>",
-              "count": 2349
+              "count": 2350
             }
           ],
           "NSPhotoLibraryUsageDescription": [
             {
               "xml": "<string>Enables us to access your photo library to save/use images for your profile, van or company image.</string>",
-              "count": 2349
+              "count": 2350
             }
           ],
           "NSPhotoLibraryAddUsageDescription": [
             {
               "xml": "<string>Enables us to access your photo library to save images to your phone.</string>",
-              "count": 2349
+              "count": 2350
             }
           ],
           "NSBluetoothAlwaysUsageDescription": [
             {
               "xml": "<string>Enables us to access bluetooth for support calls and sharing of files </string>",
-              "count": 2349
+              "count": 2350
             }
           ]
         }
