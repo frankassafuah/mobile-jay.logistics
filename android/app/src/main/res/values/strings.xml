@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JayLogisticInternational</string>
+    <string name="title_activity_main">JayLogisticInternational</string>
+    <string name="package_name">com.jaylogistic.mobile</string>
+    <string name="custom_url_scheme">com.jaylogistic.mobile</string>
+</resources>

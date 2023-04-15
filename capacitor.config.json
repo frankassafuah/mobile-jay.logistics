@@ -1,0 +1,20 @@
+{
+  "appId": "com.jaylogistic.mobile",
+  "appName": "JayLogisticInternational",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "cordova": {
+    "preferences": {
+      "prerendered-icon": "true",
+      "orientation": "portrait",
+      "AutoHideSplashScreen": "true",
+      "SplashScreenDelay": "1000",
+      "fullscreen": "false",
+      "ShowSplashScreenSpinner": "false",
+      "android-minSdkVersion": "22",
+      "android-targetSdkVersion": "28",
+      "DisallowOverscroll": "true",
+      "phonegap-version": "cli-9.0.0"
+    }
+  }
+}
