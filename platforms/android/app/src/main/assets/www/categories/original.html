@@ -1,0 +1,82 @@
+    <div class="row">
+
+            
+             <button type="button" class="btn btn-primary" style="margin: 30px 0 10px 0">Select the items to Move</button>
+    
+            <hr>
+            
+            <p>
+                If the item you would like to move is Not listed, in the first column (Name of Item), select <strong>'Not Listed'</strong> then proceed to enter the name of the item under the
+                (Name) Column. Fill in the Weight per Unit (Per Item) and the quantity.
+            </p>
+            
+              <div class="row" style="width:105%">
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                            <strong style="color:green">Category</strong>
+                      </div>
+                      
+                      <div class="col-lg-3 col-md-6 col-sm-6">
+                          Name (Of Item)
+                      </div>
+                      
+                     <div class="col-lg-2 col-md-6 col-sm-6">
+                          Weight (Per Unit/KG)
+                      </div>
+                      
+                      <div class="col-lg-2 col-md-6 col-sm-6">
+                          How many? (Quantity)
+                      </div>
+
+                      <div class="col-lg-2 col-md-6 col-sm-6">
+                          Action
+                      </div> 
+              </div>  
+
+             <!-- DYNAMIX ITEMS-->
+              <div class='container1'>
+                     <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6" style="margin-top:3px">
+                                <select id='itemz' name='itemz[]' class='itemz'>    </select>
+
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6 col-sm-6" style="margin-top:3px">
+                                <input type="text" name="citemz[]" class="form-control" placeholder="Item Name" />
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <input class='form-control' type='text' name='weight[]' value='' placeholder="Weight (KG)" >
+                            </div>
+                            
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <input class='form-control' type='text' name='count[]' value='' placeholder="Quantity" >
+                                <input type='hidden' name='weight[]' value=''>
+                            </div>
+
+                            <!-- ADD MORE -->
+                            <div class="col-lg-2 col-md-6 col-sm-6">
+                                <button type="button" class='add_form_field'>Add More</button>
+                            </div>
+                            <!-- Remove -->
+                                            
+                        </div>
+                 </div>
+                        
+                <br>
+                <br>
+                
+                
+             <hr class="col-md-12">
+                <div class='container2' style="margin-top:10px">
+                    <div class="row">
+                        <h5> Can't find what your looking for? Enter the Link/URL of the item so we can have a look </h5>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" name="special_item" id="special_item" />
+                    </div>    
+                </div>
+                
+               
+               
+               
+                        </div>
+                             </div>

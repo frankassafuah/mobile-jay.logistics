@@ -1,0 +1,1170 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; media-src *; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'; ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Jay Logistic Mobile</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/framework.css">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    <!--<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "38201302-e89b-469f-99e7-34d8d0b0158f",
+          notifyButton: {
+            enable: true,
+          },
+        });
+      });
+    </script>-->
+    <style>
+        .color-highlight {
+            color: #dc8e3f !important;
+        }
+
+        .input-style-1.has-icon .input-style-1-active {
+            color: #dd9247 !important;
+            transform: translateX(-25px);
+            transition: all 150ms ease;
+        }
+
+        .bg-green1-dark {
+            background-color: #dc8e3f !important;
+            color: #dc8e3f !important;
+        }
+
+        m.round-small.shadow-huge.bg-orange1-dark.bottom-30 {
+            background-color: #dc8e3f !important;
+            color: #dc8e3f !important;
+        }
+
+        .button {
+            background: #334dadeb;
+        }
+
+        h2.font-16.under-heading.color-highlight.bold {
+            color: orange !important;
+        }
+
+        /* STYLES */
+        #banner {
+            background: url('images/header.png');
+            top: 0;
+            height: 390px;
+            margin: -15px -15px -15px -20px;
+            background-repeat: no-repeat;
+        }
+
+        /*iphone 5 and small phones */
+        @media only screen and (max-device-width : 320px) {
+            #banner {
+                background: url('images/header.png');
+                top: 0;
+                left: 0;
+                height: 390px;
+                margin: -15px -15px -15px -15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        @media only screen and (min-device-width : 321px) and (max-device-width : 568px) {
+            #banner {
+                background: url('images/header.png');
+                top: 0;
+                left: 0;
+                height: 390px;
+                margin: -15px -15px -15px -15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        /*ipad and tablets */
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+            #banner {
+                background: url(images/header.png);
+                top: 0;
+                left: 0;
+                height: 560px;
+                margin: -35px 0px 10px -10px;
+                background-repeat: no-repeat;
+                width: 105%;
+                background-size: cover;
+            }
+        }
+
+        @media only screen and (min-device-width : 1024px) {
+            #banner {
+                background: url(images/header.png);
+                top: 0;
+                left: 0;
+                height: 560px;
+                margin: 0px 42px -29px 0px;
+                background-repeat: no-repeat;
+                width: 105%;
+            }
+        }
+
+        /* page content */
+        .page-content {
+            z-index: 95;
+            /*background-color: #f2f2f2;*/
+            overflow-x: hidden;
+            box-shadow: 0 0px 25px 13px rgba(0,0,0,0.08);
+        }
+
+        .header-clear-large {
+            padding-top: 0px;
+        }
+
+        .page-content.header-clear-large {
+            min-height: 300px !important;
+        }
+
+        .input-style-1.has-icon .input-style-1-active {
+            color: #dd9247 !important;
+            transform: translateX(-25px);
+            transition: all 150ms ease;
+            background: transparent;
+        }
+
+        #AjaxLoader {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            z-index: 99;
+            background: #ffffff82;
+            display: none
+        }
+
+            #AjaxLoader img {
+                margin: auto auto;
+                width: 10%;
+                position: fixed;
+                top: 50%;
+                left: 45%;
+            }
+        .gallery-view-3 .caption {padding-top: 20px;width: 100%;}
+    </style>
+</head>
+
+<body class="theme-light" data-highlight="blue2">
+
+    <div id="page">
+        <div id="AjaxLoader">
+            <img src="images/AjaxLoader.gif" data-src="images/AjaxLoader.gif">
+        </div>
+
+
+        <div id="page-preloader">
+            <div class="loader-main"><div class="preload-spinner border-highlight"></div></div>
+        </div>
+
+        <div class="header header-fixed header-logo-app">
+            <a href="page-profile.html" class="back-button header-title">Back to pages</a>
+            <a href="page-profile.html" class="header-icon header-icon-1 back-button"><i class="fas fa-arrow-left"></i></a>
+            <a href="#" class="header-icon header-icon-3" data-menu="menu-navigation"><i class="fas fa-bars"></i></a>
+        </div>
+
+        <div class="page-content header-clear-large">
+            <div id="banner"></div>
+
+            <div class="profile-header">
+                <div class="profile-left">
+                    <h1>Order Details</h1>
+                    <p id="profile_number">
+                        Jay Logistic
+                    </p>
+
+                    <div class="clear"></div>
+                </div>
+                <div class="profile-right">
+
+                </div>
+            </div>
+
+            <div class="content bottom-0">
+                <div class="one-half">
+                    <a href="page-profile.html" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30">Back</a>
+                </div>
+                <div class="one-half last-column" id="href-book">
+                    <a href="page-book.html" class="button button-full button-m round-small shadow-huge bg-orange2-dark bottom-30">Book Job</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="content bottom-20">
+                <div class="gallery-views gallery-view-3" id="order_details_html">
+                    <!-- start -->
+                    <!-- end -->
+                </div>
+
+                <div class="gallery-views gallery-view-3" id="order_start_html" style="display:none">
+                    <!-- start -->
+                    <div class="one-full">
+                        <a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_start_button" onClick="startJob()">Start Job</a>
+                    </div>
+                    <!-- end -->
+                </div>
+
+                <div class="gallery-views gallery-view-3" id="order_signature_html" style="display:none">
+                    <!-- start -->
+                    <div class="one-full">
+                        <a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_signature_button" onClick="signAndComplete()">Sign and Complete</a>
+                    </div>
+                    <!-- end -->
+                </div>
+
+                <div class="gallery-views gallery-view-3" id="order_accept_html" style="display:none">
+                    <!-- start -->
+                    <div class="one-full">
+                        <a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_job_button" onClick="takeJob()">Take Job</a>
+                    </div>
+                    <!-- end -->
+                </div>
+
+                <div class="gallery-views gallery-view-3" id="order_bid_client_html" style="display:none;margin-bottom:50px;">
+                    <!--start-->
+                    <h4 id="order_bid_client_html_title">Bid Listing</h4>
+                    <small>Bid listings will only appear if 1 or more drivers have bid on your job</small>
+                    <!-- end -->
+                </div>
+                
+                <div class="gallery-views gallery-view-3" id="order_bid_driver_history_html" style="display:none;margin-bottom:50px;">
+                    <!--start-->
+                    <h4 id="order_bid_driver_history_html">Bid Listing</h4>
+                    <small>Bid listings will only appear if 1 or bids have been submitted on this job</small>
+                    <!-- end -->
+                </div>
+
+                <div class="gallery-views gallery-view-3" id="order_bid_html" style="display:none">
+                    <!-- start -->
+                    <div class="input-style  input-style-1 input-required top-50">
+                        <span>Bid Amount</span>
+                        <em class="currency">(GBP) Bid</em>
+                        <input type="number" placeholder="Bid Amount" id="order_bid_input">
+                        <input type="hidden" id="order_bid_input_calculate">
+                        <small style="font-style: italic;">Jay Logistic International automatically adds a service charge to your bid</small>
+                    </div>
+                    <input type="hidden" id="currency_div" name="currency">
+                    
+                    <!--<div class="input-style  input-style-1 input-required top-50">
+                        <span>Bid Amount with (%20)</span>
+                        <em>(GBP) 20%</em>
+                        <input type="number" placeholder="Bid Amount with Charge" id="order_bid_input_calculate">
+                    </div> -->
+                    
+                    <div class="input-style  input-style-1 input-required top-50">
+                        <span>Bid Message</span>
+                        <em></em>
+                        <textarea placeholder="Bid Message" id="order_bid_message"></textarea>
+                    </div>
+
+
+                    <div class="one-full">
+                        <a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_bid_button">Bid New Amount</a>
+                    </div>
+                    <!-- end -->
+                </div>
+
+                <!-- MAP -->
+                <div id="map-canvas" style="width:100%;height:400px;min-height:250px;"></div>
+                
+                <div class="one-full">
+                    <a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30" id="launch_map_button">Open Directions</a>
+                </div>
+                
+
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="divider divider-margins"></div>
+        </div>
+
+
+        <div id="menu-navigation"
+             class="menu-box menu-transparent"
+             data-menu-type="menu-box-left"
+             data-menu-width="260"
+             data-menu-selected="nav-page-pages"
+             data-menu-load="menu-navigation.html"
+             data-menu-effect="menu-reveal">
+        </div>
+
+        <div class="menu-hider"></div>
+    </div>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="scripts/custom.js?V=1" async></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjxuVLaH1LrBs1wh4O5_XINbK8CbXG5LI&libraries=places&callback=" async defer></script>
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("deviceready", initMap, false);
+        var thisDevice;
+        var currency = 'GBP';
+		var exchange = 1.00;
+        // Cordova is ready
+
+        function purgeData() {
+            window.localStorage.setItem('JayLogisticGen', '');
+            window.localStorage.setItem('JayLogisticStat', 0);
+            window.localStorage.setItem('JayLogisticUT', '');
+        }
+
+        // VARIABLES HERE
+        const unixTime = Math.floor(Date.now() / 1000);
+        var logged_in_number;
+        var ajax_base = "https://jaylogistic.com/api/integration/v1/index.php/";
+        var profile_url = ajax_base + "manager/profile";
+        var search_url = ajax_base + "search/orderDetailsById";
+        var geo_url = ajax_base + "order/getGeo";
+        var update_bid_url = ajax_base + "order/updateBid";
+        var accept_bid_url = ajax_base + "order/acceptBid";
+        var take_job_url = ajax_base + "order/takeJob";
+        var start_job_url = ajax_base + "order/startJob";
+        var bid_details_url = ajax_base + "search/bidDetailsById";
+        var bid_details_many_url = ajax_base + "search/bidDetailsByIdMany";
+        var previous_bid_html;
+        var user_type;
+        var search_id;
+        var from_location, to_location, rider, riderLoc, item_from, item_to, markerA, markerB, markerC, driver_lat, driver_lang, delivery_status, from_geo, to_geo;
+        var icon = "https://jaylogistic.com/api/integration/v1/assets/motorcycle-2.png";
+	    
+	    //LOCATION URL
+        var ip_location_url = "https://mobile.jaylogistic.com/location.php";
+
+
+        function onDeviceReady() {
+            var logged_in_stat = localStorage.getItem('JayLogisticStat');
+            var logged_in_number = localStorage.getItem('JayLogisticGen');
+            var logged_in_user_type = localStorage.getItem('JayLogisticUT');
+            
+            thisDevice = device.model + ' ' + device.platform;
+
+            if (logged_in_stat == 1) {
+                //console.log('Logged In');
+
+                profile(logged_in_number);
+                search_id = get('id');
+                userOrders(search_id, logged_in_number);
+
+            }
+
+            if (logged_in_stat == 0 || logged_in_number == undefined || logged_in_number === null || logged_in_number === '') {
+                purgeData();
+                //console.log('Not Logged In');
+            }
+            
+            ipandlocation();
+            
+            if(logged_in_user_type == 'Driver') {
+			    $('#href-book').remove();
+			    //profile(logged_in_number);
+			}
+			
+        }
+        
+        function ipandlocation(){
+		    	$.ajax({
+					url: ip_location_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (res) {
+					if(res.country == "GH") { 
+					    
+					   //$("#payment-pp").hide();
+					   currency = res.currency;
+					   exchange = res.exchange;
+					   $(".currency").html("(" + currency  + ")");
+					   $("#currency_div").val(currency);
+					}  else {
+					   $("#payment-ps").hide();
+					}
+
+				}).fail(function (jqXHR, textStatus) {
+					//swal('Something went wrong, please try again.');
+
+				});
+		}
+
+        function profile(logged_in_number) {
+            if (logged_in_number) {
+                $.ajax({
+                    url: profile_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                    data: { number: logged_in_number },
+                }).done(function (res) {
+                    localStorage.setItem('JayLogisticUT', res.usr.user_type);
+				    if (res.usr.user_type == 'Driver') {
+					    $('#href-book').remove();
+					}
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+            } else {
+                swal('Something went wrong, please try again.');
+            }
+        }
+
+        //CLIENT ACCEPT BID
+        function acceptBid(bid_id) {
+             //e.preventDefault();
+              swal("Would you like to accept this bid?", {
+                buttons: {
+                  yes: {
+                    text: "Yes",
+                    value: "yes"
+                  },
+                  no: {
+                    text: "No",
+                    value: "no"
+                  }
+                }
+              }).then((value) => {
+                    
+                    if (value === "yes") {
+                        if (bid_id) {
+                                    $.ajax({
+                                        url: accept_bid_url + '/' + bid_id,
+                                        method: "POST",
+                                        dataType: 'json',
+                                        cache: false,
+                                    }).done(function (res) {
+                                        if (res.message == 'success') {
+                                            swal('Bid Accepted');
+                                            location.reload()
+                                        }
+                    
+                                    }).fail(function (jqXHR, textStatus) {
+                                        swal('Something went wrong, please try again.');
+                    
+                                    });
+                                } else {
+                                    swal('Something went wrong, please try again.');
+                                }
+                    }
+                
+                return false;
+              });
+            
+        }
+
+
+        function get(name) {
+            if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+                return decodeURIComponent(name[1]);
+        }
+
+        function userOrders(search_id, logged_in_number) {
+            if (search_id) {
+                $.ajax({
+                    url: search_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                    data: { search_id: search_id },
+                }).done(function (res) {
+                    //console.log(res);
+                    //IF SUCCESSFUL
+                    item = res;
+                    user_type = localStorage.getItem('JayLogisticUT');
+                    if ((user_type == 'Driver') && (item.driver_phone != logged_in_number) && (item.driver_id != null)) {
+                        swal('The Job has already been taken');
+                        window.location.href = 'page-profile.html';
+                    }
+                    
+                    if (item.bid_amount == null) {
+                        item.bid_amount = 0.00;
+                    }
+
+                    if (item.signature == null) {
+                        item.signature = "Not Available";
+                    } else {
+                        item.signature = "Signed";
+                    }
+
+                    if (item.status == null || item.status == 0) {
+                        item.status_text = "Not Started";
+                    } else if (item.status == 1) {
+                        item.status_text = "Accepted/Job Taken";
+                    } else if (item.status == 2) {
+                        item.status_text = "In Progress";
+                    } else if (item.status == 3) {
+                        item.status_text = "Completed";
+                    } else if (item.status == 4) {
+                        item.status_text = "Completed with rating";
+                    } else {
+                        item.status_text = "Accepted/Job Taken";
+                    }
+
+                    if (item.driver_first_name == null) {
+                        item.driver_first_name = '';
+                    }
+                    if (item.driver_last_name == null) {
+                        item.driver_last_name = '';
+                    }
+                    if (item.driver_phone == null) {
+                        item.driver_phone = '';
+                    }
+
+                    if (item.start_time == null) {
+                        item.start_time_text = '';
+                    } else {
+                        item.start_time_text = item.start_time;
+                    }
+                    if (item.end_time == null) {
+                        item.end_time_text = '';
+                    } else {
+                        item.end_time_text = item.end_time;
+                    }
+
+                    if (item.paid == 0) {
+                        item.paid_text = 'Not Paid';
+                    }
+                    if (item.paid == 1) {
+                        item.paid_text = 'Paid';
+                    }
+                    
+
+                    
+                    
+                    /*if (item.price > 0 && user_type == 'Driver') {
+                        var price = parseFloat(item.price * 1.20).toFixed(2);
+                    } else {
+                        var price = parseFloat(item.price).toFixed(2);
+                    }*/
+                    
+                    var price = item.price;
+                    price = parseFloat(price).toFixed(2);
+                    var bid_amount = item.bid_amount;
+                    bid_amount = parseFloat(bid_amount).toFixed(2);
+                    
+                    // iF BID JOB AND NOT ACCEPTED ANY SHOW HIGHER VALUES
+                    if(item.status == 0 && item.job_type == 0 && user_type == 'Driver') {
+                        price = parseFloat(price * 1.20).toFixed(2);
+                        bid_amount = parseFloat(bid_amount * 1.20).toFixed(2);
+                    }
+                    
+                    // IF BID JOB AND ACCEPTED A BID SHOW WHAT DRIVER BID AND WON WITH
+                    if(item.status == 1 && item.job_type == 0 && user_type == 'Driver') {
+                        price = parseFloat(price / 1.20).toFixed(2);
+                        bid_amount = parseFloat(bid_amount / 1.20).toFixed(2);
+                    }
+                    
+                    if(item.job_type == 1 && user_type == 'Driver') {
+                        price = parseFloat(price / 1.20).toFixed(2);
+                        bid_amount = parseFloat(bid_amount / 1.20).toFixed(2);
+                    }
+                    
+                    if(item.booking_currency == 'GBP') {
+					    if(currency == 'GHS') {
+					        price = parseFloat(price * exchange).toFixed(2);
+					        bid_amount = parseFloat(bid_amount * exchange).toFixed(2);
+					    }
+					}
+					
+					if(item.booking_currency == 'GHS') {
+					    if(currency == 'GBP') {
+					        price = parseFloat(price / exchange).toFixed(2);
+					        bid_amount = parseFloat(bid_amount / exchange).toFixed(2);
+					    }
+					}
+                    
+
+                    var payNow = "";
+                    if (item.paid == 0 && user_type == 'User') {
+                        payNow = '';
+                        payNow += '<div class="one-half "><a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_pay_now_button_pp" onClick="payWithPaypal()">Pay with Paypal</a></div>';
+                        payNow += '<div class="one-half last-column"><a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_pay_now_button_ps" onClick="payWithPaystack()">Pay with Paystack</a></div>';
+                        payNow += '';
+                    }
+
+                    var reloadCheck = "";
+                    if (item.paid == 0 && user_type == 'User') {
+                        reloadCheck = '';
+                        reloadCheck += '<div class="one-full"><a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_reload_button" style="background: #b9e2b9;" onClick="reloadCheck()">Payment not gone through? Recheck</a></div>';
+                        reloadCheck += '';
+                    }
+                    // CALL CLIENT
+                    var callClient = "";
+                    if (item.status < 3 && user_type == 'Driver' && item.driver_phone == logged_in_number) {
+                        callClient = '';
+                        callClient += '<div class="one-full"><a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_call_client_button" style="background: #8858a0;" href="tel:' + item.phone + '">Call Client</a></div>';
+                        callClient += '';
+                    }
+
+                    var callDriver = "";
+                    if (item.status < 3 && user_type == 'User' && item.driver_phone.length > 0) {
+                        callDriver = '';
+                        callDriver += '<div class="one-full"><a class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30" id="order_call_driver_button" style="background: #8858a0;" href="tel:' + item.driver_phone + '">Call Driver</a></div>';
+                        callDriver += '';
+                    }
+                    
+                    order_details_html = "<div class='default-link' title='Order'>";
+                    order_details_html += "<img src='images/empty.png' data-src='images/pictures/10t.jpg' class='preload-image round-small shadow-huge responsive-image' alt='img'>";
+                    order_details_html += "<div class='caption'>";
+                    order_details_html += "<h4 class='bottom-0 color-theme'>Delivery to " + item.to_location + "</h4>";
+
+                    order_details_html += "<p>";
+                    order_details_html += "<strong>System Price: " + currency + " " + price + "</strong><br>";
+                    order_details_html += "Bid Price: " + currency + " "  + "<span id='current_bid'>" + bid_amount + "<span><br>";
+                    order_details_html += "Category: " + item.category + "<br>";
+                    order_details_html += "Distance: " + item.distance + "<br>";
+                    //order_details_html += "Creation Date: " + item.date_created + "<br>";
+                    order_details_html += "Delivery Date: " + item.date + "<br>";
+
+                    order_details_html += "<br>"
+                    order_details_html += "Reference Number: 1000" + item.id + "<br>";
+                    order_details_html += "Pickup Address: " + item.from_location + "<br>";
+                    order_details_html += "Delivery Address: " + item.to_location + "<br>";
+                    order_details_html += "Floor Pickup: " + item.floor_pickup + "<br>";
+                    order_details_html += "Floor Delivery: " + item.floor_deliver + "<br>";
+                    order_details_html += "Men Needed: " + item.hire_men + "<br>";
+                    order_details_html += "Job Paid For: " + item.paid_text + "<br>";
+                    order_details_html += "Details: " + item.order_details + "<br>";
+                    order_details_html += "External Link: " + item.links+ "<br>";
+                    //order_details_html += "Delivery Status: " + "<br>";
+
+                    order_details_html += ""
+                    order_details_html += "Status: " + item.status_text + "<br>";
+                    order_details_html += "Signature: " + item.signature + "<br>";
+                    order_details_html += "<strong>Driver: " + item.driver_first_name + " " + item.driver_last_name + "</strong><br>";
+                    order_details_html += "<strong>Contact: " + item.driver_phone + "</strong><br>";
+                    order_details_html += "<br>"
+
+                    if (item.status < 3 && user_type == 'Driver') {
+                        order_details_html += "<strong>Client: " + item.first_name + " " + item.last_name + "</strong><br>";
+                        order_details_html += "<strong>Contact: " + item.phone + "</strong><br>";
+                        order_details_html += "<br>"
+                    }
+
+                    order_details_html += "Time Job Started: " + item.start_time_text + "<br>";
+                    order_details_html += "Time Job Completed: " + item.end_time_text + "<br>";
+                    order_details_html += "</p>";
+
+
+                    order_details_html += reloadCheck;
+                    order_details_html += callDriver;
+                    order_details_html += callClient;
+                    order_details_html += "<div class='divider bottom-0'></div>";
+                    order_details_html += "</div>";
+                    order_details_html += "</div>";
+                    order_details_html += payNow;
+
+
+
+                    $("#order_details_html").append(order_details_html);
+                    item_from = item.from_location;
+                    item_to = item.to_location;
+
+                    if ((item.job_type == 0) && (item.status == 0) && (user_type == 'Driver')) {
+                        $("#order_bid_input").val(/*item.bid_amount*/);
+                        $("#order_bid_client_html").hide();
+                        $("#order_bid_html").show();
+                        update_bid_url = ajax_base + "order/updateBid/" + search_id + "/" + logged_in_number + '/';
+                    }
+
+                    if ((item.job_type == 1) && (item.status == 0) && (user_type == "Driver")) {
+                        $("#order_accept_html").show();
+
+                    }
+
+                    if ((item.job_type == 0) && (item.status == 0) && (user_type == 'User')) {
+                        $.ajax({
+                            url: bid_details_many_url,
+                            method: "POST",
+                            dataType: 'json',
+                            cache: false,
+                            data: { search_id: item.booking_id }
+                        }).done(function (resu) {
+                            
+                            if(resu) {
+                                $("#order_bid_client_html_title").show();
+                                for (let res of resu) {
+                                    // FOR EACH BID FOUND
+                                    var d_name;
+                                    var d_company;
+                                    var d_name = res.first_name + ' ' + res.last_name;
+                                    var d_company = res.company;
+                                    var bid_message;
+                                    
+                                    var bid_amount = res.amount * 1.20;
+                                    bid_amount = parseFloat(bid_amount).toFixed(2);
+                                    
+                                    if (d_company == null) {
+                                        d_company = d_name
+                                    }
+                                    
+                                    if (res.bid_message == null) {
+                                        bid_message = 'Not Available'
+                                    } else {
+                                        bid_message = decodeURIComponent(res.bid_message);
+                                    }
+                                    
+            						if(res.booking_currency == 'GBP') { 
+            						    if(currency == 'GHS') {
+            						        bid_amount = parseFloat(bid_amount * exchange).toFixed(2);
+            						    }
+            						}
+            						
+            						if(res.booking_currency == 'GHS') { 
+            						    if(currency == 'GBP') {
+            						        bid_amount = parseFloat(bid_amount / exchange).toFixed(2);
+            						    }
+            						}
+                                    
+                                    
+                                    previous_bid_html = "";
+                                    previous_bid_html += "<div class='caption'>";
+                                    previous_bid_html += "<h4 class='bottom-0 color-theme'>Bid Details</h4>";
+                                    previous_bid_html += "<h4 class='bottom-0 color-theme'>Driver: " + d_company + "</h4>";
+        
+                                    previous_bid_html += "<p>";
+                                    previous_bid_html += "Bid Time: " + res.timestamp + "<span><br>";
+                                    previous_bid_html += "Bid Amount:  " + currency + " "  + " <span id='current_bid'>" + bid_amount + "<span><br>";
+                                    previous_bid_html += "Bid Message: " + bid_message + "<br>";
+                                    previous_bid_html += "</p>";
+        
+                                    previous_bid_html += "<a id='accept_bid_" + res.booking_id + "' onClick='acceptBid(" + res.bidding_id + ");' class='button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30' id='order_bid_button'>Accept Bid</a>";
+                                    previous_bid_html += "<div class='divider bottom-0'></div>";
+                                    previous_bid_html += "</div>";
+                                    $("#order_bid_client_html").append(previous_bid_html);
+                                };
+                                
+                                
+                            } else {
+                                $("#order_bid_client_html_title").hide();
+                            }
+
+
+                        }).fail(function (jqXHR, textStatus) {
+                            swal('Something went wrong, please try again.');
+
+                        });
+
+                        $("#order_bid_client_html").show();
+                    }
+
+                    if ((item.job_type == 0) && (item.status == 0) && (user_type == 'Driver')) {
+                        $.ajax({
+                            url: bid_details_url,
+                            method: "POST",
+                            dataType: 'json',
+                            cache: false,
+                            data: { search_id: item.booking_id, number:logged_in_number }
+                        }).done(function (res) {
+                            //console.log(res);
+                            var bid_message;
+                            var bid_amount = parseFloat(res.amount).toFixed(2);
+                            
+                            if(res.booking_currency == 'GBP') { 
+    						    if(currency == 'GHS') {
+    						        bid_amount = parseFloat(bid_amount * exchange).toFixed(2);
+    						    }
+    						}
+    						
+    						if(res.booking_currency == 'GHS') { 
+    						    if(currency == 'GBP') {
+    						        bid_amount = parseFloat(bid_amount / exchange).toFixed(2);
+    						    }
+    						}
+ 
+                            if (res.bid_message == null) {
+                                bid_message = 'Not Available'
+                            } else {
+                                bid_message = decodeURIComponent(res.bid_message);
+                            }
+
+                            if (res != null) {
+                                $("#order_bid_driver_history_html_title").show();
+                                previous_bid_html = "";
+                                previous_bid_html += "<div class='caption'>";
+                                previous_bid_html += "<h4 class='bottom-0 color-theme'>My Previous Bid</h4>";
+                                previous_bid_html += "<p>";
+                                previous_bid_html += "Bid Time: " + res.timestamp + "<span><br>";
+                                previous_bid_html += "Bid Amount:  " + currency + " "  + " <span id='current_bid'>" + bid_amount + "<span><br>";
+                                //previous_bid_html += "Bid Amount with (%20): GBP <span id=''>" + bid_amount + "<span><br>";
+                                previous_bid_html += "Bid Message: " + bid_message + "<br>";
+                                previous_bid_html += "</p>";
+                                previous_bid_html += "<div class='divider bottom-0'></div>";
+                                previous_bid_html += "</div>";
+                                $("#order_bid_driver_history_html").html(previous_bid_html);
+                            } else {
+                                $("#order_bid_driver_history_html_title").hide();
+                            }
+
+
+                        }).fail(function (jqXHR, textStatus) {
+                            swal('Something went wrong, please try again.');
+
+                        });
+
+                        $("#order_bid_driver_history_html").show();
+                    }
+
+                    
+                    if (item.status == 1 && user_type == 'Driver') {
+                        $("#order_start_html").show();
+                    }
+                    if (item.status == 2 && user_type == 'Driver') {
+                        $("#order_signature_html").show();
+                    }
+
+                    driver_lat = item.driver_location_lat;
+                    driver_lang = item.driver_location_lang;
+                    delivery_status = item.delivery_status
+
+                    if (delivery_status == "successful" || delivery_status == "unassigned" || delivery_status == "") {
+                        driver_lat = "";
+                        driver_lang = "";
+                    }
+                    initMap(item.from_location, item.to_location);
+                    from_location = item.from_location;
+                    to_location = item.to_location;
+
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+            } else {
+                swal('Something went wrong, please try again.');
+            }
+
+        }
+        
+        function getGeo(from_location, to_location){
+            $.ajax({
+                    url: geo_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                    data: { from_location : from_location, to_location: to_location },
+                }).done(function (res) {
+                    console.log(res);
+                    //IF BID
+                    if(res.from_geo) {
+                        from_geo = res.from_geo;
+                    } 
+                    
+                    if(res.to_geo) {
+                        to_geo = res.to_geo;
+                    }
+                    
+                    if(from_geo && to_geo) {
+                        window.open('https://www.google.com/maps/dir/?key=AIzaSyDjxuVLaH1LrBs1wh4O5_XINbK8CbXG5LI&origin=' + from_geo + '&destination=' + to_geo + '&travelmode=car');
+                    }
+                })
+        }
+        
+        $('#launch_map_button').click(function() {
+            //getGeo(from_location, to_location);
+            from_location = encodeURI(from_location);
+            to_location = encodeURI(to_location);
+            window.open('https://www.google.com/maps/dir/?api=1&origin=' + from_location + '&destination=' + to_location + '&travelmode=car');
+        });
+
+        $("#order_bid_input").on("keyup", function() {
+            var calculate = ($("#order_bid_input").val() * 1.20);
+            $("#order_bid_input_calculate").val(calculate);
+            
+            }
+        );
+        // UPDATE BID
+        $("#order_bid_button").on("click", function () {
+            //logged_in_number = localStorage.getItem('JayLogisticGen');
+            
+            var order_bid_input = $('#order_bid_input').val();
+            var order_bid_message = $('#order_bid_message').val();
+            var order_current_bid = $('#order_current_bid').val();
+
+            if (order_bid_input == null || order_bid_input.length < 1 || order_bid_input == order_current_bid) {
+                swal('Warning!','No Bid amount has been entered','warning');
+                return false; 
+            }
+            swal("Proceed to place bid?", {
+                buttons: {
+                  yes: {
+                    text: "Yes",
+                    value: "yes"
+                  },
+                  no: {
+                    text: "No",
+                    value: "no"
+                  }
+                }
+              }).then((value) => {
+                    
+                    if (value === "yes") {
+                        $.ajax({
+                            url: update_bid_url + order_bid_input + "/" + order_bid_message + "/" + currency + "/" + exchange,
+                            method: "POST",
+                            dataType: 'json',
+                            cache: false,
+                        }).done(function (data) {
+                            if (data.message == 'success') {
+                                $('#order_current_bid').html(data.price);
+                                swal('Bid Successful');
+                                location.reload();
+                            } else {
+                                swal('A bid has already been accepted');
+                                window.location.href = 'page-profile.html';
+                            }
+            
+                        }).fail(function (jqXHR, textStatus) {
+                            swal('Something went wrong, please try again.');
+                        });
+
+                    }
+                
+                return false;
+              });
+           
+        })
+
+        function takeJob() {
+            logged_in_number = localStorage.getItem('JayLogisticGen');
+            if (search_id) {
+                $.ajax({
+                    url: take_job_url + "/" + search_id + "/" + logged_in_number,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                }).done(function (res) {
+                    if (res.message == 'success') {
+                        swal('Job Successfully Taken');
+                        location.reload()
+                    }
+
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+            } else {
+                swal('Something went wrong, please try again.');
+            }
+        }
+
+        function startJob() {
+            logged_in_number = localStorage.getItem('JayLogisticGen');
+            if (search_id) {
+                $.ajax({
+                    url: start_job_url + "/" + search_id + "/" + logged_in_number,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                }).done(function (res) {
+                    if (res.message == 'success') {
+                        swal('Job Started Successfully');
+                        location.reload()
+                    } else {
+                        swal('Something went wrong');
+                        window.location.href = 'page-profile.html'
+                    }
+
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+            } else {
+                swal('Something went wrong, please try again.');
+            }
+        }
+
+        function signAndComplete() {
+            if (search_id) {
+                $.ajax({
+                    url: search_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                    data: { search_id: search_id },
+                }).done(function (res) {
+                    if (res.paid == 0) {
+                        swal('The Client has not yet paid for the job');
+                    }
+
+                    if (res.paid == 1 && res.signature == null) {
+                        window.location.href = "page-sign.html?id=" + search_id;
+                    }
+                })
+            }
+
+
+        }
+
+        function reloadCheck() {
+            swal('Rechecking Payments...');
+            location.reload();
+        }
+
+        function payWithPaypal() {
+            if(currency == "GHS") {
+                swal('Payment system is not available in your locale');
+                return false;
+            }
+            
+            if (search_id) {
+                $.ajax({
+                    url: search_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                    data: { search_id: search_id },
+                }).done(function (res) {
+                    //IF BID
+                    if (res.job_type == 0) {
+                        if(currency == "GBP" && res.booking_currency == "GBP") {
+                            amount = parseFloat(res.bid_amount).toFixed(2);
+                        }
+                        if(currency == "GBP" && res.booking_currency == "GHS") {
+                            amount = parseFloat(res.bid_amount / exchange).toFixed(2);
+                        }
+                    }
+                    
+                    if (res.paid == 0) {
+                        swal('Redirecting to Payment');
+                        payment_url = 'https://jaylogistic.com/app/extend/paypal?i=' + res.booking_id + "&a=" + amount;
+                        window.open(payment_url, '_blank');
+                        location.reload();
+                    }
+
+                    if (res.paid == 1) {
+                        swal('Already Paid For');
+                    }
+                })
+            }
+
+
+        }
+
+        function payWithPaystack() {
+            if(currency != "GHS") {
+                swal('Payment system is not available in your locale');
+                return false;
+            }
+            
+            if (search_id) {
+                $.ajax({
+                    url: search_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                    data: { search_id: search_id },
+                }).done(function (res) {
+                    //IF BID
+                    if (res.job_type == 0) {
+                        if(currency == "GHS" && res.booking_currency == "GHS") {
+                            amount = parseFloat(res.bid_amount).toFixed(2);
+                        }
+                        if(currency == "GHS" && res.booking_currency == "GBP") {
+                            amount = parseFloat(res.bid_amount * exchange).toFixed(2);
+                        }
+                    }
+                    
+                    
+                    if (res.paid == 0) {
+                        swal('Redirecting to Payment');
+                        var logged_in_number = localStorage.getItem('JayLogisticGen');
+                        payment_url = 'https://jaylogistic.com/app/paystack/pay/single/' + amount + "/" + logged_in_number + "/" + res.booking_id;
+                        //swal(payment_url);
+                        window.open(payment_url, '_blank');
+                        location.reload();
+                    }
+
+                    if (res.paid == 1) {
+                        swal('Already Paid For');
+                    }
+                })
+            }
+
+
+        }
+
+        function initMap(from_location, to_location) {
+            var pointA = from_location,
+                pointB = to_location,
+                /*riderLoc = {
+                    lat: driver_lat,
+                    lng: driver_lang
+                },*/
+
+                myOptions = {
+                    zoom: 9,
+                    center: pointA
+                },
+                map = new google.maps.Map(document.getElementById('map-canvas'), myOptions),
+                // Instantiate a directions service.
+                directionsService = new google.maps.DirectionsService,
+                directionsDisplay = new google.maps.DirectionsRenderer({
+                    map: map
+                }),
+                markerA = new google.maps.Marker({
+                    position: pointA,
+                    title: "point A",
+                    label: "From",
+                    map: map
+                }),
+                markerB = new google.maps.Marker({
+                    position: pointB,
+                    title: "point B",
+                    label: "To",
+                    map: map
+                })
+                /*markerC = new google.maps.Marker({
+                    position: riderLoc,
+                    animation: google.maps.Animation.DROP,
+                    title: "Rider",
+                    label: "",
+                    icon: icon,
+                    map: map
+                })*/
+                ;
+
+
+            // get route from A to B
+            calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB);
+
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsDisplay, pointA, pointB) {
+            directionsService.route({
+                origin: pointA,
+                destination: pointB,
+                avoidTolls: true,
+                avoidHighways: false,
+                travelMode: google.maps.TravelMode.DRIVING
+            }, function (response, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(response);
+                } else {
+                    window.swal('Directions request failed due to ' + status);
+                }
+            });
+        }
+
+        /*setInterval(function updateMap(item_from, item_to){
+
+            //initMap(item_from,item_to);
+
+        }, 10000);*/
+
+
+    </script>
+</body>
+</html>

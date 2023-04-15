@@ -1,0 +1,37 @@
+<div class="menu-navigation menu-v1">
+    <h1>Let's<br>Connect</h1>
+    <div class="menu-items">
+        <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+
+        <a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+        <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+        <a href="#"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+        <a href="#"><i class="fa fa-phone"></i><span>Call Us</span></a>
+        <a href="#"><i class="fa fa-envelope"></i><span>Email Us</span></a>
+    </div>
+    <div class="menu-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter-square"></i></a>
+        <a href="#"><i class="fab fa-whatsapp-square"></i></a>
+        <a href="#" class="close-menu"><i class="fa fa-caret-square-right color-red2-dark"></i></a>
+    </div>
+</div>
+<div class="caption-overlay bg-black opacity-80"></div>
+<div class="caption-bg bg-menu"></div>
+
+
+<script type="text/javascript">
+$(document).ready(function(){      
+    'use strict'	
+    $('.close-menu').on('click',function(){
+        $('.header-fixed, .footer-menu, .page-content').css({'transform':'translate(0,0)'});
+        $('.header').removeClass('menu-hide-header');
+        $('.footer-menu').removeClass('menu-hide-footer');
+        $('.menu-box').removeClass('menu-active');
+        $('.menu-hider').removeClass('menu-hider-visible menu-hider-3d');
+        $('.menu-hider').css({"transform":"translate(0,0)"})
+        $('.page-content').removeClass('page-content-round');
+        return false;
+    })
+});
+</script>
