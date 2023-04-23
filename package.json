@@ -26,6 +26,7 @@
     "jquery": "^3.6.4",
     "phonegap-plugin-mobile-accessibility": "git+https://github.com/phonegap/phonegap-mobile-accessibility.git",
     "platform": "1.3.6",
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "vue-google-autocomplete": "^1.1.4"
   }
 }

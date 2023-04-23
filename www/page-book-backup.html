@@ -180,10 +180,10 @@
         opacity: 1 !important;
       }
 
-      .selectize-input {
+      /* .selectize-input {
         border: 1px solid #ccc0;
         padding: 6px 6px;
-      }
+      } */
 
       .input-style-1 span {
         color: #2980b9;
@@ -272,7 +272,7 @@
                   placeholder="Moving From"
                   id="booking_moving_from"
                   name="booking_moving_from"
-                  onkeyup="geolocatefrom()"
+                  ref="movingFrom"
                   v-model="form.booking_moving_from"
                   required
                 />
@@ -286,8 +286,8 @@
                   placeholder="Moving To"
                   id="booking_moving_to"
                   name="booking_moving_to"
+                  ref="movingTo"
                   v-model="form.booking_moving_to"
-                  onkeyup="geolocateto()"
                   required
                 />
               </div>
@@ -300,7 +300,6 @@
                   id="booking_date"
                   v-model="form.booking_date"
                   name="booking_date"
-                  placeholder="YYYY-MM-DD"
                   pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
                   required
                 />
@@ -482,21 +481,24 @@
               <!-- CARS AND VEHICLES-->
               <div
                 id="booking-category-cv"
-                v-if="form.booking_category = 'cv'"
-                style="display: none"
+                v-if="form.booking_category == 'cv'"
+                v-for="(cvSpec, index) in form.cvSpecs"
+                :key="index"
                 class="cvfieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Manufacturer</span>
                   <select
                     id="booking_car_manufacturer"
-                    @change="handleBookingCarManufacturerChange()"
-                    name="booking_car_manufacturer[]"
-                    onChange="manufacturerSearch(this)"
+                    @change="handleBookingCarManufacturerChange(cvSpec.booking_car_manufacturer)"
                     required
-                    v-model="form.booking_car_manufacturer"
+                    v-model="cvSpec.booking_car_manufacturer"
                   >
-                    <option v-for="carMake in carMakes" :key="carMake.id">
+                    <option
+                      :value="carMake.id"
+                      v-for="carMake in carMakes"
+                      :key="carMake.id"
+                    >
                       {{carMake.title}}
                     </option>
                   </select>
@@ -506,7 +508,7 @@
                   <select
                     id="booking_car_model"
                     name="booking_car_model[]"
-                    v-model="form.booking_car_model"
+                    v-model="cvSpec.booking_car_model"
                     required
                   >
                     <option
@@ -524,7 +526,7 @@
                     id="booking_car_registration"
                     name="booking_car_registration[]"
                     class="form-control"
-                    v-model="form.booking_car_registration"
+                    v-model="cvSpec.booking_car_registration"
                     type="text"
                     placeholder="Registration Number"
                     required
@@ -534,10 +536,8 @@
                   <span>Operational</span>
                   <select
                     id="booking_car_operational"
-                    name="booking_car_operational[]"
-                    v-model="form.booking_car_operational"
+                    v-model="cvSpec.booking_car_operational"
                   >
-                    <option></option>
                     <option value="Operational">Yes</option>
                     <option value="Not Operational">No</option>
                   </select>
@@ -552,10 +552,18 @@
                     >Add More</a
                   >
                 </div>
+                <button
+                  v-if="form.cvSpecs.length > 1"
+                  @click="removeItem(index , 'cv')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
 
               <!-- CAR AND VEHICLE COPY-->
-              <div
+              <!-- <div
                 v-for="(cvDuplicate, index) in cvDuplicates"
                 :key="index"
                 class="cvfieldGroupCopy"
@@ -624,13 +632,14 @@
                 >
                   Remove
                 </button>
-              </div>
+              </div> -->
               <!-- END OF CARS AND VEHICLES-->
               <!--FURNITURE -->
               <div
                 id="booking-category-fa"
-                v-if="booking_category = 'fa'"
-                style="display: none"
+                v-if="form.booking_category == 'fa'"
+                v-for="(faSpec, index) in form.faSpecs"
+                :key="index"
                 class="fafieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
@@ -638,13 +647,14 @@
                   <select
                     id="booking_fa_item"
                     name="booking_fa_item[]"
-                    v-model="form.booking_fa_item"
-                    @change="otherDescriptionDisplay(furnitureAppliance.name)"
+                    v-model="faSpec.booking_fa_item"
+                    @change="otherDescriptionDisplay(faSpec.booking_fa_item)"
                     required
                   >
                     <option
-                      :value="furnitureAppliances.name"
+                      :value="furnitureAppliance.name"
                       v-for="furnitureAppliance in furnitureAppliances"
+                      :disabled="furnitureAppliance.name == 'Select an item'"
                       :key="furnitureAppliance.id"
                     >
                       {{furnitureAppliance.name}}
@@ -656,8 +666,7 @@
                   <select
                     id="booking_fa_item_search"
                     name="booking_fa_item_search[]"
-                    class="selectize"
-                    v-model="form.booking_fa_item_search"
+                    v-model="faSpec.booking_fa_item_search"
                     required
                   >
                     <option></option>
@@ -741,7 +750,7 @@
                   <span>Weight</span>
                   <input
                     id="booking_fa_weight"
-                    v-model="form.booking_fa_weight"
+                    v-model="faSpec.booking_fa_weight"
                     class="form-control"
                     type="text"
                     name="booking_fa_weight[]"
@@ -754,7 +763,7 @@
                   <input
                     id="booking_fa_dimensions"
                     class="form-control"
-                    v-model="form.booking_fa_dimensions"
+                    v-model="faSpec.booking_fa_dimensions"
                     type="text"
                     name="booking_fa_dimensions[]"
                     placeholder="90cm x 100cm x 20cm"
@@ -768,7 +777,7 @@
                     class="form-control"
                     type="number"
                     min="1"
-                    v-model="form.booking_fa_quantity"
+                    v-model="faSpec.booking_fa_quantity"
                     name="booking_fa_quantity[]"
                     placeholder="Quantity"
                     required
@@ -782,7 +791,7 @@
                     id="booking_fa_other_description"
                     class="form-control"
                     type="text"
-                    v-model="form.booking_fa_other_description"
+                    v-model="faSpec.booking_fa_other_description"
                     name="booking_fa_other_description[]"
                     placeholder="e.g Jacuzzi"
                     required
@@ -794,7 +803,7 @@
                   <input
                     id="booking_fa_url"
                     class="form-control"
-                    v-model="form.booking_fa_url"
+                    v-model="faSpec.booking_fa_url"
                     type="text"
                     name="links[]"
                     placeholder="https://image.com/image"
@@ -811,10 +820,19 @@
                     >Add More</a
                   >
                 </div>
+                <button
+                  type="button"
+                  v-if="form.faSpecs.length > 1"
+                  @click="removeItem(index , 'fa')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
 
               <!-- FURNITURE AND APPLICANCE COPY -->
-              <div
+              <!-- <div
                 v-for="(faDuplicate, index) in faDuplicates"
                 :key="index"
                 class="fafieldGroupCopy"
@@ -987,14 +1005,15 @@
                 >
                   Remove
                 </button>
-              </div>
+              </div> -->
 
               <!-- END OF FURNITURE-->
               <!-- HOME REMOVALS -->
               <div
                 id="booking-category-hr"
-                v-if="booking_category = 'hr'"
-                style="display: none"
+                v-for="(hrSpec, index) in form.hrSpecs"
+                :key="index"
+                v-if="form.booking_category == 'hr'"
                 class="hrfieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
@@ -1002,12 +1021,13 @@
                   <select
                     id="booking_hr_item"
                     name="booking_hr_item[]"
-                    v-model="form.booking_hr_item"
-                    @change="otherDescriptionDisplay(homeRemoval.name)"
+                    v-model="hrSpec.booking_hr_item"
+                    @change="otherDescriptionDisplay(hrSpec.booking_hr_item)"
                     required
                   >
                     <option
                       :value="homeRemoval.name"
+                      :disabled="homeRemoval.name == 'Select an item'"
                       v-for="homeRemoval in homeRemovals"
                       :key="homeRemoval.id"
                     >
@@ -1019,10 +1039,8 @@
                   <span>Your Item not listed?</span>
                   <select
                     id="booking_hr_item_search"
-                    v-model="form.booking_hr_item_search"
+                    v-model="hrSpec.booking_hr_item_search"
                     name="booking_hr_item_search[]"
-                    onfocus="selectMe(this)"
-                    required
                   >
                     <option></option>
                     <option value="Quilt">Quilt</option>
@@ -1105,7 +1123,7 @@
                   <span>Weight</span>
                   <input
                     id="booking_hr_weight"
-                    v-model="form.booking_hr_weight"
+                    v-model="hrSpec.booking_hr_weight"
                     name="booking_hr_weight[]"
                     class="form-control"
                     type="text"
@@ -1118,7 +1136,7 @@
                   <input
                     id="booking_hr_dimensions"
                     name="booking_hr_dimensions[]"
-                    v-model="form.booking_hr_dimensions"
+                    v-model="hrSpec.booking_hr_dimensions"
                     class="form-control"
                     type="text"
                     placeholder="90cm x 100cm x 20cm"
@@ -1129,7 +1147,7 @@
                   <span>Quantity</span>
                   <input
                     id="booking_hr_quantity"
-                    v-model="form.booking_hr_quantity"
+                    v-model="hrSpec.booking_hr_quantity"
                     name="booking_hr_quantity[]"
                     class="form-control"
                     type="number"
@@ -1144,7 +1162,7 @@
                   <span>(Other) Description of Item</span>
                   <input
                     id="booking_hr_other_description"
-                    v-model="form.booking_hr_other_description"
+                    v-model="hrSpec.booking_hr_other_description"
                     class="form-control"
                     type="text"
                     name="booking_hr_other_description[]"
@@ -1158,7 +1176,7 @@
                   <input
                     id="booking_hr_url"
                     class="form-control"
-                    v-model="form.booking_hr_url"
+                    v-model="hrSpec.booking_hr_url"
                     type="text"
                     name="links[]"
                     placeholder="https://image.com/image"
@@ -1174,10 +1192,19 @@
                     >Add More</a
                   >
                 </div>
+                <button
+                  type="button"
+                  v-if="form.hrSpecs.length > 1"
+                  @click="removeItem(index , 'hr')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
 
               <!-- HOME REMOVALS COPY -->
-              <div
+              <!-- <div
                 v-for="(hrDuplicate, index) in hrDuplicates"
                 :key="index"
                 class="hrfieldGroupCopy"
@@ -1189,7 +1216,7 @@
                   <select
                     name="booking_hr_item[]"
                     id="booking_hr_item"
-                    onFocus="hrLoad(this)"
+                    v-model="hrSpec.booking_hr_item"
                     @change="otherDescriptionDisplay(homeRemoval.name)"
                     required
                   >
@@ -1206,7 +1233,7 @@
                   <span>Your Item not listed?</span>
                   <select
                     name="booking_hr_item_search[]"
-                    onfocus="selectMe(this)"
+                    v-model="hrSpec.booking_hr_item_search"
                     required
                   >
                     <option></option>
@@ -1350,19 +1377,20 @@
                   Remove
                 </button>
               </div>
-              <!-- END OF HOME REMOVALS-->
+              END OF HOME REMOVALS -->
               <!-- ITEMS AND PARCELS -->
               <div
                 id="booking-category-ip"
-                v-if="booking_category = 'ip'"
-                style="display: none"
+                v-for="(ipSpec,index) in form.ipSpecs"
+                :key="index"
+                v-if="form.booking_category == 'ip'"
                 class="ipfieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Item</span>
                   <select
                     id="booking_ip_item"
-                    v-model="form.booking_ip_item"
+                    v-model="ipSpec.booking_ip_item"
                     name="booking_ip_item[]"
                     required
                   >
@@ -1379,7 +1407,7 @@
                   <span>Weight</span>
                   <input
                     id="booking_ip_weight"
-                    v-model="form.booking_ip_weight"
+                    v-model="ipSpec.booking_ip_weight"
                     name="booking_ip_weight[]"
                     class="form-control"
                     type="text"
@@ -1391,7 +1419,7 @@
                   <span>Dimensions</span>
                   <input
                     id="booking_ip_dimensions"
-                    v-model="form.booking_ip_dimensions"
+                    v-model="ipSpec.booking_ip_dimensions"
                     name="booking_ip_dimensions[]"
                     class="form-control"
                     type="text"
@@ -1403,7 +1431,7 @@
                   <span>Special Instructions</span>
                   <textarea
                     id="booking_ip_instructions"
-                    v-model="form.booking_ip_instructions"
+                    v-model="ipSpec.booking_ip_instructions"
                     name="booking_ip_instructions[]"
                     required
                   ></textarea>
@@ -1412,14 +1440,24 @@
                   <a
                     href="javascript:void(0)"
                     id="ip_add"
+                    @click="ipaddMore()"
                     class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ipaddMore"
                     >Add More</a
                   >
                 </div>
+                <button
+                  type="button"
+                  v-if="form.ipSpecs.length > 1"
+                  @click="removeItem(index , 'ip')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
 
               <!-- ITEMS AND PARCELS COPY -->
-              <div
+              <!-- <div
                 v-for="(ipDuplicate, index) in ipDuplicates"
                 :key="index"
                 class="ipfieldGroupCopy"
@@ -1477,20 +1515,21 @@
                 >
                   Remove
                 </button>
-              </div>
+              </div> -->
               <!-- END OF ITEMS AND PARCLES -->
               <!-- MOTORBIKE -->
               <div
                 id="booking-category-mb"
-                v-if="booking_category = 'mb'"
-                style="display: none"
+                v-for="(mbSpec, index) in form.mbSpecs"
+                :key="index"
+                v-if="form.booking_category == 'mb'"
                 class="mbfieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Type</span>
                   <select
                     id="booking_mb_item"
-                    v-model="form.booking_mb_item"
+                    v-model="mbSpec.booking_mb_item"
                     name="booking_mb_item[]"
                     required
                   >
@@ -1507,7 +1546,7 @@
                   <span>Power</span>
                   <input
                     id="booking_mb_power"
-                    v-model="form.booking_mb_power"
+                    v-model="mbSpec.booking_mb_power"
                     name="booking_mb_power[]"
                     class="form-control"
                     type="text"
@@ -1519,12 +1558,12 @@
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Operational</span>
                   <select
-                    v-model="form.booking_mb_operational"
+                    v-model="mbSpec.booking_mb_operational"
                     id="booking_mb_operational"
                     name="booking_mb_operational[]"
                     required
                   >
-                    <option></option>
+                    <option value="" disabled>Select an option</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                   </select>
@@ -1537,9 +1576,18 @@
                     >Add More</a
                   >
                 </div>
+                <button
+                  type="button"
+                  v-if="form.mbSpecs.length > 1"
+                  @click="removeItem(index , 'mb')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
               <!-- MOTORBIKE COPY -->
-              <div
+              <!-- <div
                 v-for="(mbDuplicate, index) in mbDuplicates"
                 :key="index"
                 class="mbfieldGroupCopy"
@@ -1583,19 +1631,20 @@
                 >
                   Remove
                 </button>
-              </div>
+              </div> -->
               <!-- END OF MOTORBIKE-->
               <!-- PIANO -->
               <div
                 id="booking-category-pd"
-                v-if="booking_category = 'pd'"
-                style="display: none"
+                v-for="(pdSpec,index) in form.pdSpecs"
+                :key="index"
+                v-if="form.booking_category == 'pd'"
                 class="pdfieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Item</span>
                   <select
-                    v-model="form.booking_pd_item"
+                    v-model="pdSpec.booking_pd_item"
                     id="booking_pd_item"
                     name="booking_pd_item[]"
                     required
@@ -1613,7 +1662,7 @@
                   <span>Weight</span>
                   <input
                     id="booking_pd_weight"
-                    v-model="form.booking_pd_weight"
+                    v-model="pdSpec.booking_pd_weight"
                     name="booking_pd_weight[]"
                     class="form-control"
                     type="text"
@@ -1629,9 +1678,18 @@
                     >Add More</a
                   >
                 </div>
+                <button
+                  type="button"
+                  v-if="form.pdSpecs.length > 1"
+                  @click="removeItem(index , 'pd')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
               <!-- PIANO COPY -->
-              <div
+              <!-- <div
                 v-for="(pdDuplicate, index) in pdDuplicates"
                 :key="index"
                 class="pdfieldGroupCopy"
@@ -1672,20 +1730,21 @@
                 >
                   Remove
                 </button>
-              </div>
+              </div> -->
               <!-- END OF PIANO -->
 
               <!-- FREIGHT -->
               <div
                 id="booking-category-ff"
-                v-if="booking_category = 'ff'"
-                style="display: none"
+                v-for="(ffSpec, index) in form.ffSpecs"
+                :key="index"
+                v-if="form.booking_category == 'ff'"
                 class="fffieldGroup"
               >
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Item</span>
                   <select
-                    v-model="form.booking_ff_item"
+                    v-model="ffSpec.booking_ff_item"
                     id="booking_ff_item"
                     name="booking_ff_item[]"
                     required
@@ -1702,7 +1761,7 @@
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Weight</span>
                   <input
-                    v-model="form.booking_ff_weight"
+                    v-model="ffSpec.booking_ff_weight"
                     id="booking_ff_weight"
                     name="booking_ff_weight[]"
                     class="form-control"
@@ -1714,7 +1773,7 @@
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Dimensions</span>
                   <input
-                    v-model="form.booking_ff_dimensions"
+                    v-model="ffSpec.booking_ff_dimensions"
                     id="booking_ff_dimensions"
                     name="booking_ff_dimensions[]"
                     class="form-control"
@@ -1726,10 +1785,11 @@
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Mode of Transport</span>
                   <select
-                    v-model="form.booking_ff_mode[]"
+                    v-model="ffSpec.booking_ff_mode"
                     name="booking_ff_mode[]"
                     required
                   >
+                    <option value="" selected disabled>Select mode of transport</option>
                     <option value="Air and Land">Air and Land</option>
                     <option value="Air and Sea">Air and Sea</option>
                     <option value="Air, Sea and Land">Air, Sea and Land</option>
@@ -1742,7 +1802,7 @@
                 <div class="input-style input-style-1 input-required top-50">
                   <span>Special Instructions</span>
                   <textarea
-                    v-model="form.booking_ff_instructions"
+                    v-model="ffSpec.booking_ff_instructions"
                     id="booking_ff_instructions"
                     name="booking_ff_instructions[]"
                     required
@@ -1756,9 +1816,18 @@
                     >Add More</a
                   >
                 </div>
+                <button
+                  type="button"
+                  v-if="form.ffSpecs.length > 1"
+                  @click="removeItem(index , 'ff')"
+                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
+                  style="background: red; width: 100%"
+                >
+                  Remove
+                </button>
               </div>
               <!-- FREIGHT COPY -->
-              <div
+              <!-- <div
                 v-for="(ffDuplicate, index) in ffDuplicates"
                 :key="index"
                 class="fffieldGroupCopy"
@@ -1828,7 +1897,7 @@
                 >
                   Remove
                 </button>
-              </div>
+              </div> -->
               <!-- END OF FREIGHT-->
 
               <!-- END CATEGORY FORM -->
@@ -1860,6 +1929,7 @@
                 <span>Price</span>
                 <em>(GBP)</em>
                 <input
+                  v-model="form.booking_price"
                   type="text"
                   id="booking_price"
                   name="booking_price"
@@ -1874,6 +1944,8 @@
                 <em>(required)</em>
                 <select
                   id="booking_payment_method"
+                  v-model="form.booking_payment_method"
+                  @change="handleBookingPaymentMethodChange()"
                   name="booking_payment_method"
                   required
                 >
@@ -1888,27 +1960,33 @@
               <div
                 class="input-style input-style-1 input-required top-50"
                 id="booking_your_price_div"
-                style="display: none"
+                v-if="showBookingPriceDiv"
               >
                 <span>Your Price</span>
                 <em>(GBP)</em>
                 <input
                   type="number"
+                  v-model="form.booking_your_price"
                   id="booking_your_price"
                   name="booking_your_price"
                 />
               </div>
 
-              <div id="booking_momo_div" style="display: none"></div>
+              <div v-if="showBookingMomoDiv" id="booking_momo_div"></div>
 
               <div class="clear"></div>
 
-              <div class="" id="booking_register_div" style="display: none">
+              <div
+                class=""
+                v-if="showBookingRegistrationDiv"
+                id="booking_register_div"
+              >
                 <div class="input-style input-style-1 input-required top-50">
                   <i class="input-icon fa fa-user font-11"></i>
                   <span>First Name</span>
                   <em>(required)</em>
                   <input
+                    v-model="form.profile_edit_first_name"
                     type="text"
                     placeholder="First Name"
                     id="profile_edit_first_name"
@@ -1922,6 +2000,7 @@
                   <em>(required)</em>
                   <input
                     type="text"
+                    v-model="form.profile_edit_last_name"
                     placeholder="Last Name"
                     id="profile_edit_last_name"
                     name="profile_edit_last_name"
@@ -1933,6 +2012,7 @@
                   <em>(required)</em>
                   <input
                     type="text"
+                    v-model="form.profile_edit_email"
                     placeholder="Email"
                     id="profile_edit_email"
                     name="profile_edit_email"
@@ -1944,6 +2024,7 @@
                   <em>(required)</em>
                   <input
                     type="text"
+                    v-model="form.profile_edit_phone"
                     placeholder="Phone Number"
                     id="profile_edit_phone"
                     name="profile_edit_phone"
@@ -1955,6 +2036,7 @@
                   <em>(required)</em>
                   <input
                     type="password"
+                    v-model="form.profile_edit_password"
                     placeholder="Password"
                     id="profile_edit_password"
                     name="profile_edit_password"
@@ -1972,7 +2054,7 @@
                   >BACK</a
                 >
               </div>
-              <div class="one-half book">
+              <div class="one-half book" @click="bookingNext3()">
                 <a
                   href="#"
                   id="booking_next_3"
@@ -2010,24 +2092,31 @@
 
         <div class="divider divider-margins"></div>
       </div>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="https://unpkg.com/vue@3.0.5"></script>
-      <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-      <script type="text/javascript" src="scripts/jquery.js"></script>
-      <script type="text/javascript" src="scripts/plugins.js"></script>
-      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <script type="text/javascript" src="scripts/custom.js?V=1" async></script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
-        integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjxuVLaH1LrBs1wh4O5_XINbK8CbXG5LI&libraries=places&callback=initAutocomplete"
-        async
-        defer
-      ></script>
-      <script src="page-book.vue.js"></script>
+      <div
+        id="menu-navigation"
+        class="menu-box menu-transparent"
+        data-menu-type="menu-box-left"
+        data-menu-width="260"
+        data-menu-selected="nav-page-pages"
+        data-menu-load="menu-navigation.html"
+        data-menu-effect="menu-reveal"
+      ></div>
+
+      <div class="menu-hider"></div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="scripts/custom.js?V=1" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+      integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDjxuVLaH1LrBs1wh4O5_XINbK8CbXG5LI&callback=Function.prototype"></script>
+    <script src="page-book.vue.js"></script>
   </body>
 </html>
