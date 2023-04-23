@@ -50,8 +50,8 @@ const pageBook = Vue.createApp({
       mbmaxGroup: 10,
       pdcurrentGroup: 1,
       pdmaxGroup: 10,
-      ffcurrentGroup: null,
-      ffmaxGroup: null,
+      ffcurrentGroup: 1,
+      ffmaxGroup: 10,
       //  ------------
 
       carMakes: [],
@@ -522,19 +522,24 @@ const pageBook = Vue.createApp({
       //swal('Calculating..');
       try {
         if (
-          this.booking_moving_from == null ||
-          this.booking_moving_to == null
+          this.form.booking_moving_from == null ||
+          this.form.booking_moving_to == null
         ) {
           swal("You have not entered a location, please do so");
-          return false;
+          return;
         }
+        const formData = new FormData();
+        Object.entries(this.form).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
 
-        const response = await axios.post(`${this.price_url}`, this.form);
+        const response = await axios.post(`${this.price_url}`, formData);
         if (response) {
           this.form.booking_price = response.data.price;
         }
       } catch (error) {
         swal("Something went wrong, please try again.");
+        return;
       }
     },
     bookingNext3() {
@@ -546,6 +551,10 @@ const pageBook = Vue.createApp({
       var profile_edit_last_name = this.form.profile_edit_last_name;
       var profile_edit_phone = this.form.profile_edit_phone;
       var profile_edit_password = this.form.profile_edit_password;
+      if (!this.form.booking_payment_method) {
+        swal("Please select a payment method");
+        return;
+      }
 
       if (logged_in_stat == 0) {
         swal("Create an account to proceed");
@@ -560,9 +569,9 @@ const pageBook = Vue.createApp({
           profile_edit_phone &&
           profile_edit_password
         ) {
-          submitForm();
+          this.submitForm();
         } else if (logged_in_stat == 1) {
-          submitForm();
+          this.submitForm();
         }
       } else {
         swal("You have not completed the form...");
@@ -581,7 +590,12 @@ const pageBook = Vue.createApp({
     },
     async submitForm() {
       try {
-        const response = await axios.post(`${this.submit_url}`, this.form);
+        const formData = new FormData();
+        Object.entries(this.form).forEach(([key, value]) => {
+          formData.append(key, value);
+        });
+
+        const response = await axios.post(`${this.submit_url}`, formData);
         if (response) {
           var payment_url;
           var payment_method = this.form.booking_payment_method;

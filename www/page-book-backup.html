@@ -1,2122 +1,2107 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src * gap:; style-src * 'unsafe-inline' 'unsafe-eval'; media-src *; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'; "
-    />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
-    />
-    <title>Jay Logistic Mobile</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="styles/framework.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="fonts/css/fontawesome-all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
-      integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg="
-      crossorigin="anonymous"
-    />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png" />
-    <style>
-      .color-highlight {
-        color: #dc8e3f !important;
-      }
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src * 'unsafe-inline' 'unsafe-eval'; media-src *; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'; ">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+	<title>Jay Logistic Mobile</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/framework.css">
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,500,500i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+	<link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+	<style>
+		.color-highlight {
+			color: #dc8e3f !important;
+		}
 
-      .input-style-1 .input-style-1-active {
-        color: #dd9247 !important;
-      }
+		.input-style-1 .input-style-1-active {
+			color: #dd9247 !important;
+		}
 
-      .bg-green1-dark {
-        background-color: #dc8e3f !important;
-        color: #dc8e3f !important;
-      }
+		.bg-green1-dark {
+			background-color: #dc8e3f !important;
+			color: #dc8e3f !important;
+		}
 
-      m.round-small.shadow-huge.bg-orange1-dark.bottom-30 {
-        background-color: #dc8e3f !important;
-        color: #dc8e3f !important;
-      }
+		m.round-small.shadow-huge.bg-orange1-dark.bottom-30 {
+			background-color: #dc8e3f !important;
+			color: #dc8e3f !important;
+		}
 
-      .button {
-        background: #334dadeb;
-      }
+		.button {
+			background: #334dadeb;
+		}
 
-      h2.font-16.under-heading.color-highlight.bold {
-        color: orange !important;
-      }
+		h2.font-16.under-heading.color-highlight.bold {
+			color: orange !important;
+		}
 
-      /* STYLES */
-      #banner {
-        background: url("images/header.png");
-        top: 0;
-        height: 390px;
-        margin: -15px -15px -15px -20px;
-        background-repeat: no-repeat;
-      }
+		/* STYLES */
+		#banner {
+			background: url('images/header.png');
+			top: 0;
+			height: 390px;
+			margin: -15px -15px -15px -20px;
+			background-repeat: no-repeat;
+		}
 
-      /*iphone 5 and small phones */
-      @media only screen and (max-device-width: 320px) {
-        #banner {
-          background: url("images/header.png");
-          top: 0;
-          left: 0;
-          height: 390px;
-          margin: -15px -15px -15px -15px;
-          background-repeat: no-repeat;
-          background-size: contain;
+		/*iphone 5 and small phones */
+		@media only screen and (max-device-width : 320px) {
+			#banner {
+				background: url('images/header.png');
+				top: 0;
+				left: 0;
+				height: 390px;
+				margin: -15px -15px -15px -15px;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+
+		@media only screen and (min-device-width : 321px) and (max-device-width : 568px) {
+			#banner {
+				background: url('images/header.png');
+				top: 0;
+				left: 0;
+				height: 390px;
+				margin: -15px -15px -15px -15px;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+
+		/*ipad and tablets */
+		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+			#banner {
+				background: url(images/header.png);
+				top: 0;
+				left: 0;
+				height: 560px;
+				margin: -35px 0px 10px -10px;
+				background-repeat: no-repeat;
+				width: 105%;
+				background-size: cover;
+			}
+		}
+
+		@media only screen and (min-device-width : 1024px) {
+			#banner {
+				background: url(images/header.png);
+				top: 0;
+				left: 0;
+				height: 560px;
+				margin: 0px 42px -29px 0px;
+				background-repeat: no-repeat;
+				width: 105%;
+			}
+		}
+
+		/* page content */
+		.page-content {
+			z-index: 95;
+			/*background-color: #f2f2f2;*/
+			overflow-x: hidden;
+			box-shadow: 0 0px 25px 13px rgba(0,0,0,0.08);
+		}
+
+		.header-clear-large {
+			padding-top: 0px;
+		}
+
+		.page-content.header-clear-large {
+			min-height: 300px !important;
+		}
+
+		.input-style-1 .input-style-1-active {
+			color: #dd9247 !important;
+		}
+
+		#AjaxLoader {
+			height: 100vh;
+			width: 100vw;
+			position: fixed;
+			z-index: 99;
+			background: #ffffff82;
+			display: none
+		}
+
+			#AjaxLoader img {
+				margin: auto auto;
+				width: 10%;
+				position: fixed;
+				top: 50%;
+				left: 45%;
+			}
+
+		.book {
+			width: 47%;
+			margin-right: 2%;
+			float: none;
+			display: inline-block;
+		}
+
+		.input-style-1 select {
+			margin-top: 10px;
+		}
+
+		h3 {
+			margin-left: 10px
+		}
+
+        .input-style-1-inactive {
+            color: #cacaca !important;
+            opacity: 1 !important;
+            /*display: block !important;*/
         }
-      }
 
-      @media only screen and (min-device-width: 321px) and (max-device-width: 568px) {
-        #banner {
-          background: url("images/header.png");
-          top: 0;
-          left: 0;
-          height: 390px;
-          margin: -15px -15px -15px -15px;
-          background-repeat: no-repeat;
-          background-size: contain;
+		.input-style-1 span {
+			opacity: 1 !important;
+		}
+		.selectize-input {
+            border: 1px solid #ccc0;
+            padding: 6px 6px;
         }
-      }
-
-      /*ipad and tablets */
-      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-        #banner {
-          background: url(images/header.png);
-          top: 0;
-          left: 0;
-          height: 560px;
-          margin: -35px 0px 10px -10px;
-          background-repeat: no-repeat;
-          width: 105%;
-          background-size: cover;
+        .input-style-1 span {
+            color: #2980b9;
+            font-weight: 500;
+            position: inherit;
+            font-size: 10px;
+            margin-top: -3px;
+            opacity: 0;
+            transition: all 250ms ease;
         }
-      }
-
-      @media only screen and (min-device-width: 1024px) {
-        #banner {
-          background: url(images/header.png);
-          top: 0;
-          left: 0;
-          height: 560px;
-          margin: 0px 42px -29px 0px;
-          background-repeat: no-repeat;
-          width: 105%;
+        .notification-style {
+            position: absolute;
+            top: 15%;
+            z-index: 1000;
         }
-      }
+	</style>
+</head>
+<body class="theme-light" data-highlight="blue2">
 
-      /* page content */
-      .page-content {
-        z-index: 95;
-        /*background-color: #f2f2f2;*/
-        overflow-x: hidden;
-        box-shadow: 0 0px 25px 13px rgba(0, 0, 0, 0.08);
-      }
+	<div id="page">
+		<div id="AjaxLoader">
+			<img src="images/AjaxLoader.gif" data-src="images/AjaxLoader.gif">
+		</div>
 
-      .header-clear-large {
-        padding-top: 0px;
-      }
+		<div id="page-preloader">
+			<div class="loader-main"><div class="preload-spinner border-highlight"></div></div>
+		</div>
 
-      .page-content.header-clear-large {
-        min-height: 300px !important;
-      }
+		<div class="header header-fixed header-logo-app">
+			<a href="main.html" class="back-button header-title">Back to pages</a>
+			<a href="main.html" class="header-icon header-icon-1 back-button"><i class="fas fa-arrow-left"></i></a>
+			<a href="#" class="header-icon header-icon-3" data-menu="menu-navigation"><i class="fas fa-bars"></i></a>
+		</div>
+		
+        <div id="notification" class="notification-style notification-ios bg-dark1-dark" style="display:none">
+            <span class="notification-icon">
+                <i class="fa fa-bell"></i>
+                <em>Notice</em>
+                <i class="fa fa-times-circle" onClick="closeMe('notification');"></i>
+            </span>
+            <h1 class="font-15">Maps</h1>
+            <p>
+                Your device may require you to touch and hold the location from the dropdown to select
+            </p>
+        </div>    
 
-      .input-style-1 .input-style-1-active {
-        color: #dd9247 !important;
-      }
+		<div class="page-content header-clear-large">
+			<div id="banner"></div>
 
-      #AjaxLoader {
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        z-index: 99;
-        background: #ffffff82;
-        display: none;
-      }
+               
+   
 
-      #AjaxLoader img {
-        margin: auto auto;
-        width: 10%;
-        position: fixed;
-        top: 50%;
-        left: 45%;
-      }
+			<form id="booking">
 
-      .book {
-        width: 47%;
-        margin-right: 2%;
-        float: none;
-        display: inline-block;
-      }
+				<h3>Book Our Services</h3>
+				<!-- STEP 1 -->
+				<div class="content bottom-100">
+					<div id="book_1">
 
-      .input-style-1 select {
-        margin-top: 10px;
-      }
+						<!-- HIDDEN -->
+						<input type="hidden" id="client_id" name="client_id">
 
-      h3 {
-        margin-left: 10px;
-      }
+						<div class="input-style  input-style-1 input-required top-50">
+							<!--<i class="input-icon fa fa-user font-11"></i>-->
+							<span>Moving From</span>
+							<em>(required)</em>
+							<input type="text" placeholder="Moving From" id="booking_moving_from" name="booking_moving_from" onkeyup="geolocatefrom()" required>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
+							<!--<i class="input-icon fa fa-map font-11"></i>-->
+							<span>Moving To</span>
+							<em>(required)</em>
+							<input type="text" placeholder="Moving To" id="booking_moving_to" name="booking_moving_to" onkeyup="geolocateto()" required>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
+							<!--<i class="input-icon fa fa-map font-11"></i>-->
+							<!--<span>Date</span>-->
+							<em></em>
+							<input type="date" id="booking_date" name="booking_date" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+						</div>
 
-      .input-style-1-inactive {
-        color: #cacaca !important;
-        opacity: 1 !important;
-        /*display: block !important;*/
-      }
+						<div class="clear"></div>
 
-      .input-style-1 span {
-        opacity: 1 !important;
-      }
+						<div class="one-half book">
+							<a href="#" id="booking_exit" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30">RETURN</a>
+						</div>
+						<div class="one-half book">
+							<a href="#" id="booking_next_1" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30">NEXT</a>
+						</div>
 
-      /* .selectize-input {
-        border: 1px solid #ccc0;
-        padding: 6px 6px;
-      } */
 
-      .input-style-1 span {
-        color: #2980b9;
-        font-weight: 500;
-        position: inherit;
-        font-size: 10px;
-        margin-top: -3px;
-        opacity: 0;
-        transition: all 250ms ease;
-      }
+					</div>
 
-      .notification-style {
-        position: absolute;
-        top: 15%;
-        z-index: 1000;
-      }
-    </style>
-  </head>
+					<!-- STEP 2 -->
+					<div id="book_2" style="display:none">
+						<!--HIDDEN -->
+						<div class="input-style  input-style-1 input-required top-50" style="display:none">
+							<span>Distance</span>
+							<input type="text" placeholder="Distance" id="booking_distance" name="booking_distance" required>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50" style="display:none">
+							<span>Estimated Duration</span>
+							<input type="text" placeholder="Estimated Duration" id="booking_estimated_duration" name="booking_estimated_duration" required>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50" style="display:none">
+							<span>Date of Pickup</span>
+							<input type="text" placeholder="Date of Pickup" id="booking_date_of_pickup" name="booking_date_of_pickup" required>
+						</div>
+						<!-- END OF HIDDEN -->
 
-  <body class="theme-light" data-highlight="blue2">
-    <div id="page-book">
-      <div id="AjaxLoader">
-        <img src="images/AjaxLoader.gif" data-src="images/AjaxLoader.gif" />
-      </div>
-      <!-- PAGE LOADER -->
+						<div class="input-style  input-style-1 input-required top-50">
 
-      <!-- <div id="page-preloader">
-        <div class="loader-main">
-          <div class="preload-spinner border-highlight"></div>
-        </div>
-      </div> -->
-      <div class="header header-fixed header-logo-app">
-        <a href="main.html" class="back-button header-title">Back to pages</a>
-        <a href="main.html" class="header-icon header-icon-1 back-button"
-          ><i class="fas fa-arrow-left"></i
-        ></a>
-        <a
-          href="#"
-          class="header-icon header-icon-3"
-          data-menu="menu-navigation"
-          ><i class="fas fa-bars"></i
-        ></a>
-      </div>
+							<span>Time of Pickup</span>
+							<em>(required)</em>
+							<select id="booking_time_of_pickup" name="booking_time_of_pickup" required>
+								<option value="4AM - 6AM">4AM - 6AM</option>
+								<option value="6AM - 8AM">6AM - 8AM</option>
+								<option value="8AM - 10AM">8AM - 10AM</option>
+								<option value="12AM - 12PM">12AM - 12PM</option>
+								<option value="12PM - 2PM">12PM - 2PM</option>
+								<option value="2PM - 4PM">2PM - 4PM</option>
+								<option value="4PM - 6PM">4PM - 6PM</option>
+								<option value="6PM - 8PM">6PM - 8PM</option>
+								<option value="Other Time">Other Time</option>
+							</select>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
 
-      <!-- NOTIFICATIONS -->
-      <div
-        id="notification"
-        class="notification-style notification-ios bg-dark1-dark"
-        style="display: none"
-      >
-        <span class="notification-icon">
-          <i class="fa fa-bell"></i>
-          <em>Notice</em>
-          <i class="fa fa-times-circle" onClick="closeMe('notification');"></i>
-        </span>
-        <h1 class="font-15">Maps</h1>
-        <p>
-          Your device may require you to touch and hold the location from the
-          dropdown to select
-        </p>
-      </div>
+							<span>Hire Duration (Hours)</span>
+							<em>(required)</em>
+							<input type="number" placeholder="Hire Duration" id="booking_hire_duration" name="booking_hire_duration" required min="2" value="2">
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
 
-      <!-- PAGE CONTENT -->
-      <div class="page-content header-clear-large">
-        <div id="banner"></div>
+							<span>How many men are needed?</span>
+							<em>(required)</em>
+							<input type="number" placeholder="Men Needed" id="booking_men_needed" name="booking_men_needed" required min="1" value="1">
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
 
-        <form id="booking">
-          <h3>Book Our Services</h3>
-          <!-- STEP 1 -->
-          <div class="content">
-            <div id="book_1">
-              <!-- HIDDEN -->
-              <input
-                type="hidden"
-                id="client_id"
-                v-model="form.client_id"
-                name="client_id"
-              />
+							<span>Which floor will the items be picked up from?</span>
+							<em>(required)</em>
+							<select id="booking_floor_pickup" name="booking_floor_pickup" required>
+								<option value="0">Ground</option>
+								<option value="1">1st</option>
+								<option value="2">2nd</option>
+								<option value="3">3rd</option>
+								<option value="4">4th</option>
+								<option value="5">5th</option>
+								<option value="max">Above 5th</option>
+							</select>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
 
-              <div class="input-style input-style-1 input-required top-50">
-                <!--<i class="input-icon fa fa-user font-11"></i>-->
-                <span>Moving From</span>
-                <em>(required)</em>
-                <input
-                  type="text"
-                  placeholder="Moving From"
-                  id="booking_moving_from"
-                  name="booking_moving_from"
-                  ref="movingFrom"
-                  v-model="form.booking_moving_from"
-                  required
-                />
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <!--<i class="input-icon fa fa-map font-11"></i>-->
-                <span>Moving To</span>
-                <em>(required)</em>
-                <input
-                  type="text"
-                  placeholder="Moving To"
-                  id="booking_moving_to"
-                  name="booking_moving_to"
-                  ref="movingTo"
-                  v-model="form.booking_moving_to"
-                  required
-                />
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <!--<i class="input-icon fa fa-map font-11"></i>-->
-                <!--<span>Date</span>-->
-                <em></em>
-                <input
-                  type="date"
-                  id="booking_date"
-                  v-model="form.booking_date"
-                  name="booking_date"
-                  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                  required
-                />
-              </div>
+							<span>Which floor will the items be moved to?</span>
+							<em>(required)</em>
+							<select id="booking_floor_deliver" name="booking_floor_deliver" required>
+								<option value="0">Ground</option>
+								<option value="1">1st</option>
+								<option value="2">2nd</option>
+								<option value="3">3rd</option>
+								<option value="4">4th</option>
+								<option value="5">5th</option>
+								<option value="max">Above 5th</option>
+							</select>
+						</div>
+						<div class="input-style  input-style-1 input-required top-50">
 
-              <div class="clear"></div>
+							<span>Category</span>
+							<em>(required)</em>
+							<select id="booking_category" name="booking_category" required>
+								<option value="">Select a Category</option>
+								<option value="cv">Cars and Vehicles</option>
+								<option value="fa">Furniture and Appliances</option>
+								<option value="hr">Home Removals</option>
+								<option value="ip">Items and Parcels</option>
+								<option value="mb">Motorbikes</option>
+								<option value="pd">Piano Delivery</option>
+								<option value="ff">Freight Forwarder</option>
+							</select>
+						</div>
 
-              <div class="one-half book">
-                <a
-                  href="#"
-                  id="booking_exit"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30"
-                  >RETURN</a
-                >
-              </div>
-              <div class="one-half book">
-                <a
-                  href="#"
-                  id="booking_next_1"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30"
-                  >NEXT</a
-                >
-              </div>
-            </div>
+						<div class="clear"></div>
 
-            <!-- STEP 2 -->
-            <div id="book_2" style="display: none">
-              <!--HIDDEN -->
-              <div
-                class="input-style input-style-1 input-required top-50"
-                style="display: none"
-              >
-                <span>Distance</span>
-                <input
-                  type="text"
-                  placeholder="Distance"
-                  id="booking_distance"
-                  name="booking_distance"
-                  v-model="form.booking_distance"
-                  required
-                />
-              </div>
-              <div
-                class="input-style input-style-1 input-required top-50"
-                style="display: none"
-              >
-                <span>Estimated Duration</span>
-                <input
-                  type="text"
-                  placeholder="Estimated Duration"
-                  id="booking_estimated_duration"
-                  name="booking_estimated_duration"
-                  v-model="form.booking_estimated_duration"
-                  required
-                />
-              </div>
-              <div
-                class="input-style input-style-1 input-required top-50"
-                style="display: none"
-              >
-                <span>Date of Pickup</span>
-                <input
-                  type="text"
-                  placeholder="Date of Pickup"
-                  id="booking_date_of_pickup"
-                  v-model="form.booking_date_of_pickup"
-                  name="booking_date_of_pickup"
-                  required
-                />
-              </div>
-              <!-- END OF HIDDEN -->
+						<!-- CATEGORY FORM -->
+						<!-- CARS AND VEHICLES-->
+						<div id="booking-category-cv" style="display:none" class="cvfieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Manufacturer</span>
+								<select id="booking_car_manufacturer" name="booking_car_manufacturer[]" onChange="manufacturerSearch(this)" required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Model</span>
+								<select id="booking_car_model" name="booking_car_model[]" required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Registration</span>
+								<input id="booking_car_registration" name="booking_car_registration[]" class='form-control' type='text' placeholder="Registration Number" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
 
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Time of Pickup</span>
-                <em>(required)</em>
-                <select
-                  id="booking_time_of_pickup"
-                  name="booking_time_of_pickup"
-                  v-model="form.booking_time_of_pickup"
-                  required
-                >
-                  <option value="4AM - 6AM">4AM - 6AM</option>
-                  <option value="6AM - 8AM">6AM - 8AM</option>
-                  <option value="8AM - 10AM">8AM - 10AM</option>
-                  <option value="12AM - 12PM">12AM - 12PM</option>
-                  <option value="12PM - 2PM">12PM - 2PM</option>
-                  <option value="2PM - 4PM">2PM - 4PM</option>
-                  <option value="4PM - 6PM">4PM - 6PM</option>
-                  <option value="6PM - 8PM">6PM - 8PM</option>
-                  <option value="Other Time">Other Time</option>
-                </select>
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Hire Duration (Hours)</span>
-                <em>(required)</em>
-                <input
-                  type="number"
-                  placeholder="Hire Duration"
-                  id="booking_hire_duration"
-                  name="booking_hire_duration"
-                  v-model="form.booking_hire_duration"
-                  required
-                  min="2"
-                />
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <span>How many men are needed?</span>
-                <em>(required)</em>
-                <input
-                  type="number"
-                  placeholder="Men Needed"
-                  id="booking_men_needed"
-                  name="booking_men_needed"
-                  required
-                  min="1"
-                  v-model="form.booking_men_needed"
-                />
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Which floor will the items be picked up from?</span>
-                <em>(required)</em>
-                <select
-                  id="booking_floor_pickup"
-                  name="booking_floor_pickup"
-                  v-model="form.booking_floor_pickup"
-                  required
-                >
-                  <option value="0">Ground</option>
-                  <option value="1">1st</option>
-                  <option value="2">2nd</option>
-                  <option value="3">3rd</option>
-                  <option value="4">4th</option>
-                  <option value="5">5th</option>
-                  <option value="max">Above 5th</option>
-                </select>
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Which floor will the items be moved to?</span>
-                <em>(required)</em>
-                <select
-                  id="booking_floor_deliver"
-                  name="booking_floor_deliver"
-                  v-model="form.booking_floor_deliver"
-                  required
-                >
-                  <option value="0">Ground</option>
-                  <option value="1">1st</option>
-                  <option value="2">2nd</option>
-                  <option value="3">3rd</option>
-                  <option value="4">4th</option>
-                  <option value="5">5th</option>
-                  <option value="max">Above 5th</option>
-                </select>
-              </div>
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Category</span>
-                <em>(required)</em>
-                <select
-                  id="booking_category"
-                  @change="handleBookingCategoryChange()"
-                  v-model="form.booking_category"
-                  name="booking_category"
-                  required
-                >
-                  <option value="">Select a Category</option>
-                  <option value="cv">Cars and Vehicles</option>
-                  <option value="fa">Furniture and Appliances</option>
-                  <option value="hr">Home Removals</option>
-                  <option value="ip">Items and Parcels</option>
-                  <option value="mb">Motorbikes</option>
-                  <option value="pd">Piano Delivery</option>
-                  <option value="ff">Freight Forwarder</option>
-                </select>
-              </div>
+								<span>Operational</span>
+								<select id="booking_car_operational" name="booking_car_operational[]">
+									<option></option>
+									<option value="Operational">Yes</option>
+									<option value="Not Operational">No</option>
+								</select>
+							</div>
+							<!--- ADD -->
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="cv_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 cvaddMore">Add More</a>
+							</div>
+						</div>
 
-              <div class="clear"></div>
+						<!-- CAR AND VEHICLE COPY-->
+						<div class="cvfieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Manufacturer</span>
+								<select id="booking_car_manufacturer" class="make_list" name="booking_car_manufacturer[]" onFocus="manufacturerLoad(this)" onChange="manufacturerChange(this)" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Model</span>
+								<select id="booking_car_model" class="model_list" name="booking_car_model[]" required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Registration</span>
+								<input name="booking_car_registration[]" type='text' placeholder="Registration Number" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Operational</span>
+								<select name="booking_car_operational[]">
+									<option></option>
+									<option value="Operational">Yes</option>
+									<option value="Not Operational">No</option>
+								</select>
+							</div>
 
-              <!-- CATEGORY FORM -->
-              <!-- CARS AND VEHICLES-->
-              <div
-                id="booking-category-cv"
-                v-if="form.booking_category == 'cv'"
-                v-for="(cvSpec, index) in form.cvSpecs"
-                :key="index"
-                class="cvfieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Manufacturer</span>
-                  <select
-                    id="booking_car_manufacturer"
-                    @change="handleBookingCarManufacturerChange(cvSpec.booking_car_manufacturer)"
-                    required
-                    v-model="cvSpec.booking_car_manufacturer"
-                  >
-                    <option
-                      :value="carMake.id"
-                      v-for="carMake in carMakes"
-                      :key="carMake.id"
-                    >
-                      {{carMake.title}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Model</span>
-                  <select
-                    id="booking_car_model"
-                    name="booking_car_model[]"
-                    v-model="cvSpec.booking_car_model"
-                    required
-                  >
-                    <option
-                      :value="carModel.id"
-                      v-for="carModel in carModels"
-                      :key="carModel.id"
-                    >
-                      {{carModel.title}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Registration</span>
-                  <input
-                    id="booking_car_registration"
-                    name="booking_car_registration[]"
-                    class="form-control"
-                    v-model="cvSpec.booking_car_registration"
-                    type="text"
-                    placeholder="Registration Number"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Operational</span>
-                  <select
-                    id="booking_car_operational"
-                    v-model="cvSpec.booking_car_operational"
-                  >
-                    <option value="Operational">Yes</option>
-                    <option value="Not Operational">No</option>
-                  </select>
-                </div>
-                <!--- ADD -->
-                <div class="one-half book">
-                  <a
-                    href="javascript:void(0)"
-                    id="cv_add"
-                    @click="cvaddMore()"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 cvaddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  v-if="form.cvSpecs.length > 1"
-                  @click="removeItem(index , 'cv')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
+							<button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 cvremove" style="background:red;width:100%">Remove</button>
+						</div>
+						<!-- END OF CARS AND VEHICLES-->
+						<!--FURNITURE -->
+						<div id="booking-category-fa" style="display:none" class="fafieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select id="booking_fa_item" name="booking_fa_item[]" onChange="otherDescriptionDisplay(this);"  required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Your Item not listed?</span>
+								<select id="booking_fa_item_search" name='booking_fa_item_search[]' class="selectize" required>
+									<option></option>
+									<option value="Quilt">Quilt</option>
+									<option value="Double Bed">Double Bed</option>
+									<option value="Kingsize Bed">Kingsize Bed</option>
+									<option value="Single Wardrobe">Single Wardrobe</option>
+									<option value="Chest of Drawers">Chest of Drawers</option>
+									<option value="Bedside Table">Bedside Table</option>
+									<option value="Box of Toys">Box of Toys</option>
+									<option value="Scooter">Scooter</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="BMX Bike">BMX Bike</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Tumble Dryer">Tumble Dryer</option>
+									<option value="Boiler">Boiler</option>
+									<option value="Alloy Wheel">Alloy Wheel</option>
+									<option value="Display Unit">Display Unit</option>
+									<option value="Aquarium">Aquarium</option>
+									<option value="Ant Farm">Ant Farm</option>
+									<option value="Quad Wardrobe">Quad Wardrobe</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Box of Antiques">Box of Antiques</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Exhaust Fan">Exhaust Fan</option>
+									<option value="Ceiling Fan">Ceiling Fan</option>
+									<option value="Standing Air Condition">Standing Air Condition</option>
+									<option value="Portable Air Condition">Portable Air Condition</option>
+									<option value="Split Type Air Condition">Split Type Air Condition</option>
+									<option value="Mannequin">Mannequin</option>
+									<option value="Two Seat Sofa">Two Seat Sofa</option>
+									<option value="Three Seat Sofa">Three Seat Sofa</option>
+									<option value="Arm Chair">Arm Chair</option>
+									<option value="Coffee Table">Coffee Table</option>
+									<option value="Small TV(Less than 30inch">Small TV(Less than 30inch)</option>
+									<option value="Large TV(More than 40inch)">Large TV(More than 40inch)</option>
+									<option value="TV Stand">TV Stand</option>
+									<option value="Bookcase">Bookcase</option>
+									<option value="Desk">Desk</option>
+									<option value="Office Chair">Office Chair</option>
+									<option value="Artwork">Artwork</option>
+									<option value="Fridge Freezer">Fridge Freezer</option>
+									<option value="Washing Machine">Washing Machine</option>
+									<option value="Microwave Oven">Microwave Oven</option>
+									<option value="Cooker">Cooker</option>
+									<option value="Dishwasher">Dishwasher</option>
+									<option value="Kitchen Table">Kitchen Table</option>
+									<option value="Dining Chair">Dining Chair</option>
+									<option value="Bin">Bin</option>
+									<option value="Large Mirror">Large Mirror</option>
+									<option value="Small Mirror">Small Mirror</option>
+									<option value="Bathroom Cabinet">Bathroom Cabinet</option>
+									<option value="Bath Tub28">Bath Tub</option>
+									<option value="Large Box">Large Box</option>
+									<option value="Medium Box">Medium Box</option>
+									<option value="Small Box">Small Box</option>
+									<option value="Wardrobe Box">Wardrobe Box</option>
+									<option value="Suitcase">Suitcase</option>
+									<option value="Bag">Bag</option>
+									<option value="Digital Piano">Digital Piano</option>
+									<option value="Upright Piano">Upright Piano</option>
+									<option value="Grand Piano">Grand Piano</option>
+									<option value="Baby Grand Piano">Baby Grand Piano</option>
+									<option value="Concert Grand Piano">Concert Grand Piano</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input id="booking_fa_weight" class='form-control' type='text' name='booking_fa_weight[]' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input id="booking_fa_dimensions" class='form-control' type='text' name='booking_fa_dimensions[]' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Quantity</span>
+								<input id="booking_fa_quantity" class='form-control' type='number' min="1" value="1"  name='booking_fa_quantity[]' placeholder="Quantity" required />
+							</div>
+							
+							
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>(Other) Description of Item</span>
+								<input id="booking_fa_other_description" class='form-control' type='text' name='booking_fa_other_description[]' placeholder="e.g Jacuzzi" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>(Other) URL / Image of Item</span>
+								<input id="booking_fa_url" class='form-control' type='text' name='links[]' placeholder="https://image.com/image" required />
+							</div>
 
-              <!-- CAR AND VEHICLE COPY-->
-              <!-- <div
-                v-for="(cvDuplicate, index) in cvDuplicates"
-                :key="index"
-                class="cvfieldGroupCopy"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Manufacturer</span>
-                  <select
-                    id="booking_car_manufacturer"
-                    @change="handleBookingCarManufacturerChange()"
-                    class="make_list"
-                    name="booking_car_manufacturer[]"
-                    onFocus="manufacturerLoad(this)"
-                    onChange="manufacturerChange(this)"
-                    v-model="form.booking_car_manufacturer"
-                    required
-                  >
-                    <option
-                      :value="carMake.id"
-                      v-for="carMake in carMakes"
-                      :key="carMake.id"
-                    >
-                      {{carMake.title}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Model</span>
-                  <select
-                    id="booking_car_model"
-                    class="model_list"
-                    name="booking_car_model[]"
-                    required
-                  >
-                    <option
-                      :value="carModel.id"
-                      v-for="carModel in carModels"
-                      :key="carModel.id"
-                    >
-                      {{carModel.title}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Registration</span>
-                  <input
-                    name="booking_car_registration[]"
-                    type="text"
-                    placeholder="Registration Number"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Operational</span>
-                  <select name="booking_car_operational[]">
-                    <option></option>
-                    <option value="Operational">Yes</option>
-                    <option value="Not Operational">No</option>
-                  </select>
-                </div>
+							<!--- ADD -->
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="fa_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faaddMore">Add More</a>
+							</div>
 
-                <button
-                  @click="removeItem('cv')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 cvremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div> -->
-              <!-- END OF CARS AND VEHICLES-->
-              <!--FURNITURE -->
-              <div
-                id="booking-category-fa"
-                v-if="form.booking_category == 'fa'"
-                v-for="(faSpec, index) in form.faSpecs"
-                :key="index"
-                class="fafieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    id="booking_fa_item"
-                    name="booking_fa_item[]"
-                    v-model="faSpec.booking_fa_item"
-                    @change="otherDescriptionDisplay(faSpec.booking_fa_item)"
-                    required
-                  >
-                    <option
-                      :value="furnitureAppliance.name"
-                      v-for="furnitureAppliance in furnitureAppliances"
-                      :disabled="furnitureAppliance.name == 'Select an item'"
-                      :key="furnitureAppliance.id"
-                    >
-                      {{furnitureAppliance.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Your Item not listed?</span>
-                  <select
-                    id="booking_fa_item_search"
-                    name="booking_fa_item_search[]"
-                    v-model="faSpec.booking_fa_item_search"
-                    required
-                  >
-                    <option></option>
-                    <option value="Quilt">Quilt</option>
-                    <option value="Double Bed">Double Bed</option>
-                    <option value="Kingsize Bed">Kingsize Bed</option>
-                    <option value="Single Wardrobe">Single Wardrobe</option>
-                    <option value="Chest of Drawers">Chest of Drawers</option>
-                    <option value="Bedside Table">Bedside Table</option>
-                    <option value="Box of Toys">Box of Toys</option>
-                    <option value="Scooter">Scooter</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="BMX Bike">BMX Bike</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Tumble Dryer">Tumble Dryer</option>
-                    <option value="Boiler">Boiler</option>
-                    <option value="Alloy Wheel">Alloy Wheel</option>
-                    <option value="Display Unit">Display Unit</option>
-                    <option value="Aquarium">Aquarium</option>
-                    <option value="Ant Farm">Ant Farm</option>
-                    <option value="Quad Wardrobe">Quad Wardrobe</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Box of Antiques">Box of Antiques</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Exhaust Fan">Exhaust Fan</option>
-                    <option value="Ceiling Fan">Ceiling Fan</option>
-                    <option value="Standing Air Condition">
-                      Standing Air Condition
-                    </option>
-                    <option value="Portable Air Condition">
-                      Portable Air Condition
-                    </option>
-                    <option value="Split Type Air Condition">
-                      Split Type Air Condition
-                    </option>
-                    <option value="Mannequin">Mannequin</option>
-                    <option value="Two Seat Sofa">Two Seat Sofa</option>
-                    <option value="Three Seat Sofa">Three Seat Sofa</option>
-                    <option value="Arm Chair">Arm Chair</option>
-                    <option value="Coffee Table">Coffee Table</option>
-                    <option value="Small TV(Less than 30inch">
-                      Small TV(Less than 30inch)
-                    </option>
-                    <option value="Large TV(More than 40inch)">
-                      Large TV(More than 40inch)
-                    </option>
-                    <option value="TV Stand">TV Stand</option>
-                    <option value="Bookcase">Bookcase</option>
-                    <option value="Desk">Desk</option>
-                    <option value="Office Chair">Office Chair</option>
-                    <option value="Artwork">Artwork</option>
-                    <option value="Fridge Freezer">Fridge Freezer</option>
-                    <option value="Washing Machine">Washing Machine</option>
-                    <option value="Microwave Oven">Microwave Oven</option>
-                    <option value="Cooker">Cooker</option>
-                    <option value="Dishwasher">Dishwasher</option>
-                    <option value="Kitchen Table">Kitchen Table</option>
-                    <option value="Dining Chair">Dining Chair</option>
-                    <option value="Bin">Bin</option>
-                    <option value="Large Mirror">Large Mirror</option>
-                    <option value="Small Mirror">Small Mirror</option>
-                    <option value="Bathroom Cabinet">Bathroom Cabinet</option>
-                    <option value="Bath Tub28">Bath Tub</option>
-                    <option value="Large Box">Large Box</option>
-                    <option value="Medium Box">Medium Box</option>
-                    <option value="Small Box">Small Box</option>
-                    <option value="Wardrobe Box">Wardrobe Box</option>
-                    <option value="Suitcase">Suitcase</option>
-                    <option value="Bag">Bag</option>
-                    <option value="Digital Piano">Digital Piano</option>
-                    <option value="Upright Piano">Upright Piano</option>
-                    <option value="Grand Piano">Grand Piano</option>
-                    <option value="Baby Grand Piano">Baby Grand Piano</option>
-                    <option value="Concert Grand Piano">
-                      Concert Grand Piano
-                    </option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    id="booking_fa_weight"
-                    v-model="faSpec.booking_fa_weight"
-                    class="form-control"
-                    type="text"
-                    name="booking_fa_weight[]"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    id="booking_fa_dimensions"
-                    class="form-control"
-                    v-model="faSpec.booking_fa_dimensions"
-                    type="text"
-                    name="booking_fa_dimensions[]"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Quantity</span>
-                  <input
-                    id="booking_fa_quantity"
-                    class="form-control"
-                    type="number"
-                    min="1"
-                    v-model="faSpec.booking_fa_quantity"
-                    name="booking_fa_quantity[]"
-                    placeholder="Quantity"
-                    required
-                  />
-                </div>
+						</div>
 
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>(Other) Description of Item</span>
-                  <input
-                    id="booking_fa_other_description"
-                    class="form-control"
-                    type="text"
-                    v-model="faSpec.booking_fa_other_description"
-                    name="booking_fa_other_description[]"
-                    placeholder="e.g Jacuzzi"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>(Other) URL / Image of Item</span>
-                  <input
-                    id="booking_fa_url"
-                    class="form-control"
-                    v-model="faSpec.booking_fa_url"
-                    type="text"
-                    name="links[]"
-                    placeholder="https://image.com/image"
-                    required
-                  />
-                </div>
+						<!-- FURNITURE AND APPLICANCE COPY -->
+						<div class="fafieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select id="booking_fa_item" name="booking_fa_item[]" onfocus="faLoad(this);" onChange="otherDescriptionDisplay(this);" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Your Item not listed?</span>
+								<select name='booking_fa_item_search[]' onfocus="selectMe(this)" required>
+								    <option></option>
+									<option value="Quilt">Quilt</option>
+									<option value="Double Bed">Double Bed</option>
+									<option value="Kingsize Bed">Kingsize Bed</option>
+									<option value="Single Wardrobe">Single Wardrobe</option>
+									<option value="Chest of Drawers">Chest of Drawers</option>
+									<option value="Bedside Table">Bedside Table</option>
+									<option value="Box of Toys">Box of Toys</option>
+									<option value="Scooter">Scooter</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="BMX Bike">BMX Bike</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Tumble Dryer">Tumble Dryer</option>
+									<option value="Boiler">Boiler</option>
+									<option value="Alloy Wheel">Alloy Wheel</option>
+									<option value="Display Unit">Display Unit</option>
+									<option value="Aquarium">Aquarium</option>
+									<option value="Ant Farm">Ant Farm</option>
+									<option value="Quad Wardrobe">Quad Wardrobe</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Box of Antiques">Box of Antiques</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Exhaust Fan">Exhaust Fan</option>
+									<option value="Ceiling Fan">Ceiling Fan</option>
+									<option value="Standing Air Condition">Standing Air Condition</option>
+									<option value="Portable Air Condition">Portable Air Condition</option>
+									<option value="Split Type Air Condition">Split Type Air Condition</option>
+									<option value="Mannequin">Mannequin</option>
+									<option value="Two Seat Sofa">Two Seat Sofa</option>
+									<option value="Three Seat Sofa">Three Seat Sofa</option>
+									<option value="Arm Chair">Arm Chair</option>
+									<option value="Coffee Table">Coffee Table</option>
+									<option value="Small TV(Less than 30inch">Small TV(Less than 30inch)</option>
+									<option value="Large TV(More than 40inch)">Large TV(More than 40inch)</option>
+									<option value="TV Stand">TV Stand</option>
+									<option value="Bookcase">Bookcase</option>
+									<option value="Desk">Desk</option>
+									<option value="Office Chair">Office Chair</option>
+									<option value="Artwork">Artwork</option>
+									<option value="Fridge Freezer">Fridge Freezer</option>
+									<option value="Washing Machine">Washing Machine</option>
+									<option value="Microwave Oven">Microwave Oven</option>
+									<option value="Cooker">Cooker</option>
+									<option value="Dishwasher">Dishwasher</option>
+									<option value="Kitchen Table">Kitchen Table</option>
+									<option value="Dining Chair">Dining Chair</option>
+									<option value="Bin">Bin</option>
+									<option value="Large Mirror">Large Mirror</option>
+									<option value="Small Mirror">Small Mirror</option>
+									<option value="Bathroom Cabinet">Bathroom Cabinet</option>
+									<option value="Bath Tub28">Bath Tub</option>
+									<option value="Large Box">Large Box</option>
+									<option value="Medium Box">Medium Box</option>
+									<option value="Small Box">Small Box</option>
+									<option value="Wardrobe Box">Wardrobe Box</option>
+									<option value="Suitcase">Suitcase</option>
+									<option value="Bag">Bag</option>
+									<option value="Digital Piano">Digital Piano</option>
+									<option value="Upright Piano">Upright Piano</option>
+									<option value="Grand Piano">Grand Piano</option>
+									<option value="Baby Grand Piano">Baby Grand Piano</option>
+									<option value="Concert Grand Piano">Concert Grand Piano</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input class='form-control' type='text' name='booking_fa_weight[]' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input class='form-control' type='text' name='booking_fa_dimensions[]' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Quantity</span>
+								<input class='form-control' type='number' name='booking_fa_quantity[]' min="1" value="1" placeholder="Quantity" required />
+							</div>
+							
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>(Other) Description of Item</span>
+								<input id="booking_fa_other_description" class='form-control' type='text' name='booking_fa_other_description[]' placeholder="e.g Jacuzzi" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>URL / Image of Item</span>
+								<input id="booking_fa_url" class='form-control' type='text' name='links[]' placeholder="https://image.com/image" required />
+							</div>
+							<button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove" style="background:red;width:100%">Remove</button>
+						</div>
+						
+						<!-- END OF FURNITURE-->
+						<!-- HOME REMOVALS -->
+						<div id="booking-category-hr" style="display:none" class="hrfieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select id="booking_hr_item" name='booking_hr_item[]' onChange="otherDescriptionDisplay(this);" required>
+								</select>
+							</div>	
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Your Item not listed?</span>
+								<select id="booking_hr_item_search" name='booking_hr_item_search[]' onfocus="selectMe(this)" required>
+									<option></option>
+									<option value="Quilt">Quilt</option>
+									<option value="Double Bed">Double Bed</option>
+									<option value="Kingsize Bed">Kingsize Bed</option>
+									<option value="Single Wardrobe">Single Wardrobe</option>
+									<option value="Chest of Drawers">Chest of Drawers</option>
+									<option value="Bedside Table">Bedside Table</option>
+									<option value="Box of Toys">Box of Toys</option>
+									<option value="Scooter">Scooter</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="BMX Bike">BMX Bike</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Tumble Dryer">Tumble Dryer</option>
+									<option value="Boiler">Boiler</option>
+									<option value="Alloy Wheel">Alloy Wheel</option>
+									<option value="Display Unit">Display Unit</option>
+									<option value="Aquarium">Aquarium</option>
+									<option value="Ant Farm">Ant Farm</option>
+									<option value="Quad Wardrobe">Quad Wardrobe</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Box of Antiques">Box of Antiques</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Exhaust Fan">Exhaust Fan</option>
+									<option value="Ceiling Fan">Ceiling Fan</option>
+									<option value="Standing Air Condition">Standing Air Condition</option>
+									<option value="Portable Air Condition">Portable Air Condition</option>
+									<option value="Split Type Air Condition">Split Type Air Condition</option>
+									<option value="Mannequin">Mannequin</option>
+									<option value="Two Seat Sofa">Two Seat Sofa</option>
+									<option value="Three Seat Sofa">Three Seat Sofa</option>
+									<option value="Arm Chair">Arm Chair</option>
+									<option value="Coffee Table">Coffee Table</option>
+									<option value="Small TV(Less than 30inch">Small TV(Less than 30inch)</option>
+									<option value="Large TV(More than 40inch)">Large TV(More than 40inch)</option>
+									<option value="TV Stand">TV Stand</option>
+									<option value="Bookcase">Bookcase</option>
+									<option value="Desk">Desk</option>
+									<option value="Office Chair">Office Chair</option>
+									<option value="Artwork">Artwork</option>
+									<option value="Fridge Freezer">Fridge Freezer</option>
+									<option value="Washing Machine">Washing Machine</option>
+									<option value="Microwave Oven">Microwave Oven</option>
+									<option value="Cooker">Cooker</option>
+									<option value="Dishwasher">Dishwasher</option>
+									<option value="Kitchen Table">Kitchen Table</option>
+									<option value="Dining Chair">Dining Chair</option>
+									<option value="Bin">Bin</option>
+									<option value="Large Mirror">Large Mirror</option>
+									<option value="Small Mirror">Small Mirror</option>
+									<option value="Bathroom Cabinet">Bathroom Cabinet</option>
+									<option value="Bath Tub28">Bath Tub</option>
+									<option value="Large Box">Large Box</option>
+									<option value="Medium Box">Medium Box</option>
+									<option value="Small Box">Small Box</option>
+									<option value="Wardrobe Box">Wardrobe Box</option>
+									<option value="Suitcase">Suitcase</option>
+									<option value="Bag">Bag</option>
+									<option value="Digital Piano">Digital Piano</option>
+									<option value="Upright Piano">Upright Piano</option>
+									<option value="Grand Piano">Grand Piano</option>
+									<option value="Baby Grand Piano">Baby Grand Piano</option>
+									<option value="Concert Grand Piano">Concert Grand Piano</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input id="booking_hr_weight" name='booking_hr_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input id="booking_hr_dimensions" name='booking_hr_dimensions[]' class='form-control' type='text' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Quantity</span>
+								<input id="booking_hr_quantity" name='booking_hr_quantity[]' class='form-control' type='number' min="1" value="1" placeholder="Quantity" required />
+							</div>
+							
+						    <div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>(Other) Description of Item</span>
+								<input id="booking_hr_other_description" class='form-control' type='text' name='booking_hr_other_description[]' placeholder="e.g Jacuzzi" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>(Other) URL / Image of Item</span>
+								<input id="booking_hr_url" class='form-control' type='text' name='links[]' placeholder="https://image.com/image" required />
+							</div>
 
-                <!--- ADD -->
-                <div class="one-half book" @click="faaddMore()">
-                  <a
-                    href="javascript:void(0)"
-                    id="fa_add"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faaddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  type="button"
-                  v-if="form.faSpecs.length > 1"
-                  @click="removeItem(index , 'fa')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="hr_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 hraddMore">Add More</a>
+							</div>
+						</div>
 
-              <!-- FURNITURE AND APPLICANCE COPY -->
-              <!-- <div
-                v-for="(faDuplicate, index) in faDuplicates"
-                :key="index"
-                class="fafieldGroupCopy"
-                v-if="booking_category = 'fa'"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    id="booking_fa_item"
-                    name="booking_fa_item[]"
-                    onfocus="faLoad(this);"
-                    @change="otherDescriptionDisplay(furnitureAppliance.name)"
-                    required
-                  >
-                    <option
-                      :value="furnitureAppliances.name"
-                      v-for="furnitureAppliance in furnitureAppliances"
-                      :key="furnitureAppliance.id"
-                    >
-                      {{furnitureAppliance.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Your Item not listed?</span>
-                  <select
-                    name="booking_fa_item_search[]"
-                    onfocus="selectMe(this)"
-                    required
-                  >
-                    <option></option>
-                    <option value="Quilt">Quilt</option>
-                    <option value="Double Bed">Double Bed</option>
-                    <option value="Kingsize Bed">Kingsize Bed</option>
-                    <option value="Single Wardrobe">Single Wardrobe</option>
-                    <option value="Chest of Drawers">Chest of Drawers</option>
-                    <option value="Bedside Table">Bedside Table</option>
-                    <option value="Box of Toys">Box of Toys</option>
-                    <option value="Scooter">Scooter</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="BMX Bike">BMX Bike</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Tumble Dryer">Tumble Dryer</option>
-                    <option value="Boiler">Boiler</option>
-                    <option value="Alloy Wheel">Alloy Wheel</option>
-                    <option value="Display Unit">Display Unit</option>
-                    <option value="Aquarium">Aquarium</option>
-                    <option value="Ant Farm">Ant Farm</option>
-                    <option value="Quad Wardrobe">Quad Wardrobe</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Box of Antiques">Box of Antiques</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Exhaust Fan">Exhaust Fan</option>
-                    <option value="Ceiling Fan">Ceiling Fan</option>
-                    <option value="Standing Air Condition">
-                      Standing Air Condition
-                    </option>
-                    <option value="Portable Air Condition">
-                      Portable Air Condition
-                    </option>
-                    <option value="Split Type Air Condition">
-                      Split Type Air Condition
-                    </option>
-                    <option value="Mannequin">Mannequin</option>
-                    <option value="Two Seat Sofa">Two Seat Sofa</option>
-                    <option value="Three Seat Sofa">Three Seat Sofa</option>
-                    <option value="Arm Chair">Arm Chair</option>
-                    <option value="Coffee Table">Coffee Table</option>
-                    <option value="Small TV(Less than 30inch">
-                      Small TV(Less than 30inch)
-                    </option>
-                    <option value="Large TV(More than 40inch)">
-                      Large TV(More than 40inch)
-                    </option>
-                    <option value="TV Stand">TV Stand</option>
-                    <option value="Bookcase">Bookcase</option>
-                    <option value="Desk">Desk</option>
-                    <option value="Office Chair">Office Chair</option>
-                    <option value="Artwork">Artwork</option>
-                    <option value="Fridge Freezer">Fridge Freezer</option>
-                    <option value="Washing Machine">Washing Machine</option>
-                    <option value="Microwave Oven">Microwave Oven</option>
-                    <option value="Cooker">Cooker</option>
-                    <option value="Dishwasher">Dishwasher</option>
-                    <option value="Kitchen Table">Kitchen Table</option>
-                    <option value="Dining Chair">Dining Chair</option>
-                    <option value="Bin">Bin</option>
-                    <option value="Large Mirror">Large Mirror</option>
-                    <option value="Small Mirror">Small Mirror</option>
-                    <option value="Bathroom Cabinet">Bathroom Cabinet</option>
-                    <option value="Bath Tub28">Bath Tub</option>
-                    <option value="Large Box">Large Box</option>
-                    <option value="Medium Box">Medium Box</option>
-                    <option value="Small Box">Small Box</option>
-                    <option value="Wardrobe Box">Wardrobe Box</option>
-                    <option value="Suitcase">Suitcase</option>
-                    <option value="Bag">Bag</option>
-                    <option value="Digital Piano">Digital Piano</option>
-                    <option value="Upright Piano">Upright Piano</option>
-                    <option value="Grand Piano">Grand Piano</option>
-                    <option value="Baby Grand Piano">Baby Grand Piano</option>
-                    <option value="Concert Grand Piano">
-                      Concert Grand Piano
-                    </option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="booking_fa_weight[]"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    class="form-control"
-                    type="text"
-                    name="booking_fa_dimensions[]"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Quantity</span>
-                  <input
-                    class="form-control"
-                    type="number"
-                    name="booking_fa_quantity[]"
-                    min="1"
-                    value="1"
-                    placeholder="Quantity"
-                    required
-                  />
-                </div>
+						<!-- HOME REMOVALS COPY -->
+						<div class="hrfieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select name='booking_hr_item[]' id="booking_hr_item" onFocus="hrLoad(this)" onChange="otherDescriptionDisplay(this);" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Your Item not listed?</span>
+								<select name='booking_hr_item_search[]' onfocus="selectMe(this)" required>
+								    <option></option>
+									<option value="Quilt">Quilt</option>
+									<option value="Double Bed">Double Bed</option>
+									<option value="Kingsize Bed">Kingsize Bed</option>
+									<option value="Single Wardrobe">Single Wardrobe</option>
+									<option value="Chest of Drawers">Chest of Drawers</option>
+									<option value="Bedside Table">Bedside Table</option>
+									<option value="Box of Toys">Box of Toys</option>
+									<option value="Scooter">Scooter</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="BMX Bike">BMX Bike</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Tumble Dryer">Tumble Dryer</option>
+									<option value="Boiler">Boiler</option>
+									<option value="Alloy Wheel">Alloy Wheel</option>
+									<option value="Display Unit">Display Unit</option>
+									<option value="Aquarium">Aquarium</option>
+									<option value="Ant Farm">Ant Farm</option>
+									<option value="Quad Wardrobe">Quad Wardrobe</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Box of Antiques">Box of Antiques</option>
+									<option value="Mountain Bike">Mountain Bike</option>
+									<option value="Exhaust Fan">Exhaust Fan</option>
+									<option value="Ceiling Fan">Ceiling Fan</option>
+									<option value="Standing Air Condition">Standing Air Condition</option>
+									<option value="Portable Air Condition">Portable Air Condition</option>
+									<option value="Split Type Air Condition">Split Type Air Condition</option>
+									<option value="Mannequin">Mannequin</option>
+									<option value="Two Seat Sofa">Two Seat Sofa</option>
+									<option value="Three Seat Sofa">Three Seat Sofa</option>
+									<option value="Arm Chair">Arm Chair</option>
+									<option value="Coffee Table">Coffee Table</option>
+									<option value="Small TV(Less than 30inch">Small TV(Less than 30inch)</option>
+									<option value="Large TV(More than 40inch)">Large TV(More than 40inch)</option>
+									<option value="TV Stand">TV Stand</option>
+									<option value="Bookcase">Bookcase</option>
+									<option value="Desk">Desk</option>
+									<option value="Office Chair">Office Chair</option>
+									<option value="Artwork">Artwork</option>
+									<option value="Fridge Freezer">Fridge Freezer</option>
+									<option value="Washing Machine">Washing Machine</option>
+									<option value="Microwave Oven">Microwave Oven</option>
+									<option value="Cooker">Cooker</option>
+									<option value="Dishwasher">Dishwasher</option>
+									<option value="Kitchen Table">Kitchen Table</option>
+									<option value="Dining Chair">Dining Chair</option>
+									<option value="Bin">Bin</option>
+									<option value="Large Mirror">Large Mirror</option>
+									<option value="Small Mirror">Small Mirror</option>
+									<option value="Bathroom Cabinet">Bathroom Cabinet</option>
+									<option value="Bath Tub28">Bath Tub</option>
+									<option value="Large Box">Large Box</option>
+									<option value="Medium Box">Medium Box</option>
+									<option value="Small Box">Small Box</option>
+									<option value="Wardrobe Box">Wardrobe Box</option>
+									<option value="Suitcase">Suitcase</option>
+									<option value="Bag">Bag</option>
+									<option value="Digital Piano">Digital Piano</option>
+									<option value="Upright Piano">Upright Piano</option>
+									<option value="Grand Piano">Grand Piano</option>
+									<option value="Baby Grand Piano">Baby Grand Piano</option>
+									<option value="Concert Grand Piano">Concert Grand Piano</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input name='booking_hr_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input name='booking_hr_dimensions[]' class='form-control' type='text' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Quantity</span>
+								<input name='booking_hr_quantity[]' class='form-control' type='number' min="1" value="1"  placeholder="Quantity" required />
+							</div>
+							
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>(Other) Description of Item</span>
+								<input id="booking_hr_other_description" class='form-control' type='text' name='booking_hr_other_description[]' placeholder="e.g Jacuzzi" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+							    <em>(Optional)</em>
+								<span>URL / Image of Item</span>
+								<input id="booking_hr_url" class='form-control' type='text' name='links[]' placeholder="https://image.com/image" required />
+							</div>
+							<button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 hrremove" style="background:red;width:100%">Remove</button>
 
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>(Other) Description of Item</span>
-                  <input
-                    id="booking_fa_other_description"
-                    class="form-control"
-                    type="text"
-                    name="booking_fa_other_description[]"
-                    placeholder="e.g Jacuzzi"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>URL / Image of Item</span>
-                  <input
-                    id="booking_fa_url"
-                    class="form-control"
-                    type="text"
-                    name="links[]"
-                    placeholder="https://image.com/image"
-                    required
-                  />
-                </div>
-                <button
-                  @click="removeItem('fa')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div> -->
+						</div>
+						<!-- END OF HOME REMOVALS-->
+						<!-- ITEMS AND PARCELS -->
+						<div id="booking-category-ip" style="display:none" class="ipfieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select id="booking_ip_item" name='booking_ip_item[]' required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input id="booking_ip_weight" name='booking_ip_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input id="booking_ip_dimensions" name='booking_ip_dimensions[]' class='form-control' type='text' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Special Instructions</span>
+								<textarea id="booking_ip_instructions" name='booking_ip_instructions[]' required></textarea>
+							</div>
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="ip_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ipaddMore">Add More</a>
+							</div>
+						</div>
 
-              <!-- END OF FURNITURE-->
-              <!-- HOME REMOVALS -->
-              <div
-                id="booking-category-hr"
-                v-for="(hrSpec, index) in form.hrSpecs"
-                :key="index"
-                v-if="form.booking_category == 'hr'"
-                class="hrfieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    id="booking_hr_item"
-                    name="booking_hr_item[]"
-                    v-model="hrSpec.booking_hr_item"
-                    @change="otherDescriptionDisplay(hrSpec.booking_hr_item)"
-                    required
-                  >
-                    <option
-                      :value="homeRemoval.name"
-                      :disabled="homeRemoval.name == 'Select an item'"
-                      v-for="homeRemoval in homeRemovals"
-                      :key="homeRemoval.id"
-                    >
-                      {{homeRemoval.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Your Item not listed?</span>
-                  <select
-                    id="booking_hr_item_search"
-                    v-model="hrSpec.booking_hr_item_search"
-                    name="booking_hr_item_search[]"
-                  >
-                    <option></option>
-                    <option value="Quilt">Quilt</option>
-                    <option value="Double Bed">Double Bed</option>
-                    <option value="Kingsize Bed">Kingsize Bed</option>
-                    <option value="Single Wardrobe">Single Wardrobe</option>
-                    <option value="Chest of Drawers">Chest of Drawers</option>
-                    <option value="Bedside Table">Bedside Table</option>
-                    <option value="Box of Toys">Box of Toys</option>
-                    <option value="Scooter">Scooter</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="BMX Bike">BMX Bike</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Tumble Dryer">Tumble Dryer</option>
-                    <option value="Boiler">Boiler</option>
-                    <option value="Alloy Wheel">Alloy Wheel</option>
-                    <option value="Display Unit">Display Unit</option>
-                    <option value="Aquarium">Aquarium</option>
-                    <option value="Ant Farm">Ant Farm</option>
-                    <option value="Quad Wardrobe">Quad Wardrobe</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Box of Antiques">Box of Antiques</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Exhaust Fan">Exhaust Fan</option>
-                    <option value="Ceiling Fan">Ceiling Fan</option>
-                    <option value="Standing Air Condition">
-                      Standing Air Condition
-                    </option>
-                    <option value="Portable Air Condition">
-                      Portable Air Condition
-                    </option>
-                    <option value="Split Type Air Condition">
-                      Split Type Air Condition
-                    </option>
-                    <option value="Mannequin">Mannequin</option>
-                    <option value="Two Seat Sofa">Two Seat Sofa</option>
-                    <option value="Three Seat Sofa">Three Seat Sofa</option>
-                    <option value="Arm Chair">Arm Chair</option>
-                    <option value="Coffee Table">Coffee Table</option>
-                    <option value="Small TV(Less than 30inch">
-                      Small TV(Less than 30inch)
-                    </option>
-                    <option value="Large TV(More than 40inch)">
-                      Large TV(More than 40inch)
-                    </option>
-                    <option value="TV Stand">TV Stand</option>
-                    <option value="Bookcase">Bookcase</option>
-                    <option value="Desk">Desk</option>
-                    <option value="Office Chair">Office Chair</option>
-                    <option value="Artwork">Artwork</option>
-                    <option value="Fridge Freezer">Fridge Freezer</option>
-                    <option value="Washing Machine">Washing Machine</option>
-                    <option value="Microwave Oven">Microwave Oven</option>
-                    <option value="Cooker">Cooker</option>
-                    <option value="Dishwasher">Dishwasher</option>
-                    <option value="Kitchen Table">Kitchen Table</option>
-                    <option value="Dining Chair">Dining Chair</option>
-                    <option value="Bin">Bin</option>
-                    <option value="Large Mirror">Large Mirror</option>
-                    <option value="Small Mirror">Small Mirror</option>
-                    <option value="Bathroom Cabinet">Bathroom Cabinet</option>
-                    <option value="Bath Tub28">Bath Tub</option>
-                    <option value="Large Box">Large Box</option>
-                    <option value="Medium Box">Medium Box</option>
-                    <option value="Small Box">Small Box</option>
-                    <option value="Wardrobe Box">Wardrobe Box</option>
-                    <option value="Suitcase">Suitcase</option>
-                    <option value="Bag">Bag</option>
-                    <option value="Digital Piano">Digital Piano</option>
-                    <option value="Upright Piano">Upright Piano</option>
-                    <option value="Grand Piano">Grand Piano</option>
-                    <option value="Baby Grand Piano">Baby Grand Piano</option>
-                    <option value="Concert Grand Piano">
-                      Concert Grand Piano
-                    </option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    id="booking_hr_weight"
-                    v-model="hrSpec.booking_hr_weight"
-                    name="booking_hr_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    id="booking_hr_dimensions"
-                    name="booking_hr_dimensions[]"
-                    v-model="hrSpec.booking_hr_dimensions"
-                    class="form-control"
-                    type="text"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Quantity</span>
-                  <input
-                    id="booking_hr_quantity"
-                    v-model="hrSpec.booking_hr_quantity"
-                    name="booking_hr_quantity[]"
-                    class="form-control"
-                    type="number"
-                    min="1"
-                    placeholder="Quantity"
-                    required
-                  />
-                </div>
+						<!-- ITEMS AND PARCELS COPY -->
+						<div class="ipfieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select name='booking_ip_item[]' id="booking_ip_item" onFocus="ipLoad(this)" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input name='booking_ip_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input name='booking_ip_dimensions[]' class='form-control' type='text' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Special Instructions</span>
+								<textarea name='booking_ip_instructions[]' required></textarea>
+							</div>
+                            <button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ipremove" style="background:red;width:100%">Remove</button>
 
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>(Other) Description of Item</span>
-                  <input
-                    id="booking_hr_other_description"
-                    v-model="hrSpec.booking_hr_other_description"
-                    class="form-control"
-                    type="text"
-                    name="booking_hr_other_description[]"
-                    placeholder="e.g Jacuzzi"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>(Other) URL / Image of Item</span>
-                  <input
-                    id="booking_hr_url"
-                    class="form-control"
-                    v-model="hrSpec.booking_hr_url"
-                    type="text"
-                    name="links[]"
-                    placeholder="https://image.com/image"
-                    required
-                  />
-                </div>
+						</div>
+						<!-- END OF ITEMS AND PARCLES -->
+						<!-- MOTORBIKE -->
+						<div id="booking-category-mb" style="display:none" class="mbfieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Type</span>
+								<select id="booking_mb_item" name='booking_mb_item[]' required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Power</span>
+								<input id="booking_mb_power" name='booking_mb_power[]' class='form-control' type='text' placeholder="2000cc" required />
+							</div>
 
-                <div class="one-half book" @click="hraddMore()">
-                  <a
-                    href="javascript:void(0)"
-                    id="hr_add"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 hraddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  type="button"
-                  v-if="form.hrSpecs.length > 1"
-                  @click="removeItem(index , 'hr')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Operational</span>
+								<select id="booking_mb_operational" name='booking_mb_operational[]' required>
+									<option></option>
+									<option value="Yes">Yes</option>
+									<option value="No">No</option>
+								</select>
+							</div>
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="mb_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 mbaddMore">Add More</a>
+							</div>
+						</div>
+						<!-- MOTORBIKE COPY -->
+						<div class="mbfieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Type</span>
+								<select name='booking_mb_item[]' id="booking_mb_item" onFocus="mbLoad(this)" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Power</span>
+								<input name='booking_mb_power[]' class='form-control' type='text' placeholder="2000cc" required />
+							</div>
 
-              <!-- HOME REMOVALS COPY -->
-              <!-- <div
-                v-for="(hrDuplicate, index) in hrDuplicates"
-                :key="index"
-                class="hrfieldGroupCopy"
-                v-if="booking_category = 'hr'"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    name="booking_hr_item[]"
-                    id="booking_hr_item"
-                    v-model="hrSpec.booking_hr_item"
-                    @change="otherDescriptionDisplay(homeRemoval.name)"
-                    required
-                  >
-                    <option
-                      :value="homeRemoval.name"
-                      v-for="homeRemoval in homeRemovals"
-                      :key="homeRemoval.id"
-                    >
-                      {{homeRemoval.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Your Item not listed?</span>
-                  <select
-                    name="booking_hr_item_search[]"
-                    v-model="hrSpec.booking_hr_item_search"
-                    required
-                  >
-                    <option></option>
-                    <option value="Quilt">Quilt</option>
-                    <option value="Double Bed">Double Bed</option>
-                    <option value="Kingsize Bed">Kingsize Bed</option>
-                    <option value="Single Wardrobe">Single Wardrobe</option>
-                    <option value="Chest of Drawers">Chest of Drawers</option>
-                    <option value="Bedside Table">Bedside Table</option>
-                    <option value="Box of Toys">Box of Toys</option>
-                    <option value="Scooter">Scooter</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="BMX Bike">BMX Bike</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Tumble Dryer">Tumble Dryer</option>
-                    <option value="Boiler">Boiler</option>
-                    <option value="Alloy Wheel">Alloy Wheel</option>
-                    <option value="Display Unit">Display Unit</option>
-                    <option value="Aquarium">Aquarium</option>
-                    <option value="Ant Farm">Ant Farm</option>
-                    <option value="Quad Wardrobe">Quad Wardrobe</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Box of Antiques">Box of Antiques</option>
-                    <option value="Mountain Bike">Mountain Bike</option>
-                    <option value="Exhaust Fan">Exhaust Fan</option>
-                    <option value="Ceiling Fan">Ceiling Fan</option>
-                    <option value="Standing Air Condition">
-                      Standing Air Condition
-                    </option>
-                    <option value="Portable Air Condition">
-                      Portable Air Condition
-                    </option>
-                    <option value="Split Type Air Condition">
-                      Split Type Air Condition
-                    </option>
-                    <option value="Mannequin">Mannequin</option>
-                    <option value="Two Seat Sofa">Two Seat Sofa</option>
-                    <option value="Three Seat Sofa">Three Seat Sofa</option>
-                    <option value="Arm Chair">Arm Chair</option>
-                    <option value="Coffee Table">Coffee Table</option>
-                    <option value="Small TV(Less than 30inch">
-                      Small TV(Less than 30inch)
-                    </option>
-                    <option value="Large TV(More than 40inch)">
-                      Large TV(More than 40inch)
-                    </option>
-                    <option value="TV Stand">TV Stand</option>
-                    <option value="Bookcase">Bookcase</option>
-                    <option value="Desk">Desk</option>
-                    <option value="Office Chair">Office Chair</option>
-                    <option value="Artwork">Artwork</option>
-                    <option value="Fridge Freezer">Fridge Freezer</option>
-                    <option value="Washing Machine">Washing Machine</option>
-                    <option value="Microwave Oven">Microwave Oven</option>
-                    <option value="Cooker">Cooker</option>
-                    <option value="Dishwasher">Dishwasher</option>
-                    <option value="Kitchen Table">Kitchen Table</option>
-                    <option value="Dining Chair">Dining Chair</option>
-                    <option value="Bin">Bin</option>
-                    <option value="Large Mirror">Large Mirror</option>
-                    <option value="Small Mirror">Small Mirror</option>
-                    <option value="Bathroom Cabinet">Bathroom Cabinet</option>
-                    <option value="Bath Tub28">Bath Tub</option>
-                    <option value="Large Box">Large Box</option>
-                    <option value="Medium Box">Medium Box</option>
-                    <option value="Small Box">Small Box</option>
-                    <option value="Wardrobe Box">Wardrobe Box</option>
-                    <option value="Suitcase">Suitcase</option>
-                    <option value="Bag">Bag</option>
-                    <option value="Digital Piano">Digital Piano</option>
-                    <option value="Upright Piano">Upright Piano</option>
-                    <option value="Grand Piano">Grand Piano</option>
-                    <option value="Baby Grand Piano">Baby Grand Piano</option>
-                    <option value="Concert Grand Piano">
-                      Concert Grand Piano
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    name="booking_hr_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    name="booking_hr_dimensions[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Quantity</span>
-                  <input
-                    name="booking_hr_quantity[]"
-                    class="form-control"
-                    type="number"
-                    min="1"
-                    value="1"
-                    placeholder="Quantity"
-                    required
-                  />
-                </div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Operational</span>
+								<select name='booking_mb_operational[]' required>
+									<option></option>
+									<option value="Yes">Yes</option>
+									<option value="No">No</option>
+								</select>
+							</div>
+							<button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 mbremove" style="background:red;width:100%">Remove</button>
 
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>(Other) Description of Item</span>
-                  <input
-                    id="booking_hr_other_description"
-                    class="form-control"
-                    type="text"
-                    name="booking_hr_other_description[]"
-                    placeholder="e.g Jacuzzi"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <em>(Optional)</em>
-                  <span>URL / Image of Item</span>
-                  <input
-                    id="booking_hr_url"
-                    class="form-control"
-                    type="text"
-                    name="links[]"
-                    placeholder="https://image.com/image"
-                    required
-                  />
-                </div>
-                <button
-                  @click="removeItem('hr')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 hrremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
-              END OF HOME REMOVALS -->
-              <!-- ITEMS AND PARCELS -->
-              <div
-                id="booking-category-ip"
-                v-for="(ipSpec,index) in form.ipSpecs"
-                :key="index"
-                v-if="form.booking_category == 'ip'"
-                class="ipfieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    id="booking_ip_item"
-                    v-model="ipSpec.booking_ip_item"
-                    name="booking_ip_item[]"
-                    required
-                  >
-                    <option
-                      :value="itemParcel.name"
-                      v-for="itemParcel in itemParcels"
-                      :key="itemParcel.id"
-                    >
-                      {{itemParcel.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    id="booking_ip_weight"
-                    v-model="ipSpec.booking_ip_weight"
-                    name="booking_ip_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    id="booking_ip_dimensions"
-                    v-model="ipSpec.booking_ip_dimensions"
-                    name="booking_ip_dimensions[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Special Instructions</span>
-                  <textarea
-                    id="booking_ip_instructions"
-                    v-model="ipSpec.booking_ip_instructions"
-                    name="booking_ip_instructions[]"
-                    required
-                  ></textarea>
-                </div>
-                <div class="one-half book">
-                  <a
-                    href="javascript:void(0)"
-                    id="ip_add"
-                    @click="ipaddMore()"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ipaddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  type="button"
-                  v-if="form.ipSpecs.length > 1"
-                  @click="removeItem(index , 'ip')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
+						</div>
+						<!-- END OF MOTORBIKE-->
+						<!-- PIANO -->
+						<div id="booking-category-pd" style="display:none" class="pdfieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select id="booking_pd_item" name='booking_pd_item[]' required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input id="booking_pd_weight" name='booking_pd_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="pd_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 pdaddMore">Add More</a>
+							</div>
+						</div>
+						<!-- PIANO COPY -->
+						<div class="pdfieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select name='booking_pd_item[]' id='booking_pd_item' onFocus="pdLoad(this)" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input name='booking_pd_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 pdremove" style="background:red;width:100%">Remove</button>
 
-              <!-- ITEMS AND PARCELS COPY -->
-              <!-- <div
-                v-for="(ipDuplicate, index) in ipDuplicates"
-                :key="index"
-                class="ipfieldGroupCopy"
-                v-if="booking_category = 'ip'"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    name="booking_ip_item[]"
-                    id="booking_ip_item"
-                    onFocus="ipLoad(this)"
-                    required
-                  >
-                    <option
-                      :value="itemParcel.name"
-                      v-for="itemParcel in itemParcels"
-                      :key="itemParcel.id"
-                    >
-                      {{itemParcel.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    name="booking_ip_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    name="booking_ip_dimensions[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Special Instructions</span>
-                  <textarea
-                    name="booking_ip_instructions[]"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  @click="removeItem('ip')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ipremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div> -->
-              <!-- END OF ITEMS AND PARCLES -->
-              <!-- MOTORBIKE -->
-              <div
-                id="booking-category-mb"
-                v-for="(mbSpec, index) in form.mbSpecs"
-                :key="index"
-                v-if="form.booking_category == 'mb'"
-                class="mbfieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Type</span>
-                  <select
-                    id="booking_mb_item"
-                    v-model="mbSpec.booking_mb_item"
-                    name="booking_mb_item[]"
-                    required
-                  >
-                    <option
-                      :value="motorbike.name"
-                      v-for="motorbike in motorbikes"
-                      :key="motorbike.id"
-                    >
-                      {{motorbike.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Power</span>
-                  <input
-                    id="booking_mb_power"
-                    v-model="mbSpec.booking_mb_power"
-                    name="booking_mb_power[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="2000cc"
-                    required
-                  />
-                </div>
+						</div>
+						<!-- END OF PIANO -->
 
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Operational</span>
-                  <select
-                    v-model="mbSpec.booking_mb_operational"
-                    id="booking_mb_operational"
-                    name="booking_mb_operational[]"
-                    required
-                  >
-                    <option value="" disabled>Select an option</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-                </div>
-                <div class="one-half book" @click="mbaddMore()">
-                  <a
-                    href="javascript:void(0)"
-                    id="mb_add"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 mbaddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  type="button"
-                  v-if="form.mbSpecs.length > 1"
-                  @click="removeItem(index , 'mb')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
-              <!-- MOTORBIKE COPY -->
-              <!-- <div
-                v-for="(mbDuplicate, index) in mbDuplicates"
-                :key="index"
-                class="mbfieldGroupCopy"
-                v-if="booking_category = 'mb'"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Type</span>
-                  <select
-                    name="booking_mb_item[]"
-                    id="booking_mb_item"
-                    onFocus="mbLoad(this)"
-                    required
-                  >
-                    <option>Press to Load List</option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Power</span>
-                  <input
-                    name="booking_mb_power[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="2000cc"
-                    required
-                  />
-                </div>
+						<!-- FREIGHT -->
+						<div id="booking-category-ff" style="display:none" class="fffieldGroup">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select id="booking_ff_item" name='booking_ff_item[]' required>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input id="booking_ff_weight" name='booking_ff_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input id="booking_ff_dimensions" name='booking_ff_dimensions[]' class='form-control' type='text' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Mode of Transport</span>
+								<select name='booking_ff_mode[]' required>
+								    <option value="Air and Land">Air and Land</option>
+								    <option value="Air and Sea">Air and Sea</option>
+								    <option value="Air, Sea and Land">Air, Sea and Land</option>
+								    <option value="Land and Sea">Land and Sea</option>
+								    <option value="Air Only">Air Only</option>
+								    <option value="Land Only">Land Only</option>
+								    <option value="Sea Only">Sea Only</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Special Instructions</span>
+								<textarea id="booking_ff_instructions" name='booking_ff_instructions[]' required></textarea>
+							</div>
+							<div class="one-half book">
+								<a href="javascript:void(0)" id="ff_add" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ffaddMore">Add More</a>
+							</div>
+						</div>
+						<!-- FREIGHT COPY -->
+						<div class="fffieldGroupCopy" style="display: none;">
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Item</span>
+								<select name='booking_ff_item[]' id='booking_ff_item' onFocus="ffLoad(this)" required>
+								    <option>Press to Load List</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Weight</span>
+								<input name='booking_ff_weight[]' class='form-control' type='text' placeholder="50kg" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Dimensions</span>
+								<input name='booking_ff_dimensions[]' class='form-control' type='text' placeholder="90cm x 100cm x 20cm" required />
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Mode of Transport</span>
+								<select name='booking_ff_mode[]' required>
+								    <option value="Air and Land">Air and Land</option>
+								    <option value="Air and Sea">Air and Sea</option>
+								    <option value="Air, Sea and Land">Air, Sea and Land</option>
+								    <option value="Land and Sea">Land and Sea</option>
+								    <option value="Air Only">Air Only</option>
+								    <option value="Land Only">Land Only</option>
+								    <option value="Sea Only">Sea Only</option>
+								</select>
+							</div>
+							<div class="input-style  input-style-1 input-required top-50">
+								<span>Special Instructions</span>
+								<textarea name='booking_ff_instructions[]' required></textarea>
+							</div>
+							<button onClick="removeItem(this)" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ffremove" style="background:red;width:100%">Remove</button>
 
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Operational</span>
-                  <select name="booking_mb_operational[]" required>
-                    <option></option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                  </select>
-                </div>
-                <button
-                  @click="removeItem('mb')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 mbremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div> -->
-              <!-- END OF MOTORBIKE-->
-              <!-- PIANO -->
-              <div
-                id="booking-category-pd"
-                v-for="(pdSpec,index) in form.pdSpecs"
-                :key="index"
-                v-if="form.booking_category == 'pd'"
-                class="pdfieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    v-model="pdSpec.booking_pd_item"
-                    id="booking_pd_item"
-                    name="booking_pd_item[]"
-                    required
-                  >
-                    <option
-                      :value="pianoDelivery.name"
-                      v-for="pianoDelivery in pianoDeliveries"
-                      :key="pianoDelivery.id"
-                    >
-                      {{pianoDelivery.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    id="booking_pd_weight"
-                    v-model="pdSpec.booking_pd_weight"
-                    name="booking_pd_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="one-half book" @click="pdaddMore()">
-                  <a
-                    href="javascript:void(0)"
-                    id="pd_add"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 pdaddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  type="button"
-                  v-if="form.pdSpecs.length > 1"
-                  @click="removeItem(index , 'pd')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
-              <!-- PIANO COPY -->
-              <!-- <div
-                v-for="(pdDuplicate, index) in pdDuplicates"
-                :key="index"
-                class="pdfieldGroupCopy"
-                v-if="booking_category = 'pd'"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    name="booking_pd_item[]"
-                    id="booking_pd_item"
-                    onFocus="pdLoad(this)"
-                    required
-                  >
-                    <option
-                      :value="pianoDelivery.name"
-                      v-for="pianoDelivery in pianoDeliveries"
-                      :key="pianoDelivery.id"
-                    >
-                      {{pianoDelivery.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    name="booking_pd_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <button
-                  @click="removeItem('pd')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 pdremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div> -->
-              <!-- END OF PIANO -->
+						</div>
+						<!-- END OF FREIGHT-->
 
-              <!-- FREIGHT -->
-              <div
-                id="booking-category-ff"
-                v-for="(ffSpec, index) in form.ffSpecs"
-                :key="index"
-                v-if="form.booking_category == 'ff'"
-                class="fffieldGroup"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    v-model="ffSpec.booking_ff_item"
-                    id="booking_ff_item"
-                    name="booking_ff_item[]"
-                    required
-                  >
-                    <option
-                      :value="freightForward.name"
-                      v-for="freightForward in freightForwards"
-                      :key="freightForward.id"
-                    >
-                      {{freightForward.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    v-model="ffSpec.booking_ff_weight"
-                    id="booking_ff_weight"
-                    name="booking_ff_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    v-model="ffSpec.booking_ff_dimensions"
-                    id="booking_ff_dimensions"
-                    name="booking_ff_dimensions[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Mode of Transport</span>
-                  <select
-                    v-model="ffSpec.booking_ff_mode"
-                    name="booking_ff_mode[]"
-                    required
-                  >
-                    <option value="" selected disabled>Select mode of transport</option>
-                    <option value="Air and Land">Air and Land</option>
-                    <option value="Air and Sea">Air and Sea</option>
-                    <option value="Air, Sea and Land">Air, Sea and Land</option>
-                    <option value="Land and Sea">Land and Sea</option>
-                    <option value="Air Only">Air Only</option>
-                    <option value="Land Only">Land Only</option>
-                    <option value="Sea Only">Sea Only</option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Special Instructions</span>
-                  <textarea
-                    v-model="ffSpec.booking_ff_instructions"
-                    id="booking_ff_instructions"
-                    name="booking_ff_instructions[]"
-                    required
-                  ></textarea>
-                </div>
-                <div class="one-half book" @click="ffaddMore()">
-                  <a
-                    href="javascript:void(0)"
-                    id="ff_add"
-                    class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ffaddMore"
-                    >Add More</a
-                  >
-                </div>
-                <button
-                  type="button"
-                  v-if="form.ffSpecs.length > 1"
-                  @click="removeItem(index , 'ff')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 faremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div>
-              <!-- FREIGHT COPY -->
-              <!-- <div
-                v-for="(ffDuplicate, index) in ffDuplicates"
-                :key="index"
-                class="fffieldGroupCopy"
-                v-if="booking_category = 'ff'"
-                style="display: none"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Item</span>
-                  <select
-                    name="booking_ff_item[]"
-                    id="booking_ff_item"
-                    onFocus="ffLoad(this)"
-                    required
-                  >
-                    <option
-                      :value="freightForward.name"
-                      v-for="freightForward in freightForwards"
-                      :key="freightForward.id"
-                    >
-                      {{freightForward.name}}
-                    </option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Weight</span>
-                  <input
-                    name="booking_ff_weight[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="50kg"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Dimensions</span>
-                  <input
-                    name="booking_ff_dimensions[]"
-                    class="form-control"
-                    type="text"
-                    placeholder="90cm x 100cm x 20cm"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Mode of Transport</span>
-                  <select name="booking_ff_mode[]" required>
-                    <option value="Air and Land">Air and Land</option>
-                    <option value="Air and Sea">Air and Sea</option>
-                    <option value="Air, Sea and Land">Air, Sea and Land</option>
-                    <option value="Land and Sea">Land and Sea</option>
-                    <option value="Air Only">Air Only</option>
-                    <option value="Land Only">Land Only</option>
-                    <option value="Sea Only">Sea Only</option>
-                  </select>
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <span>Special Instructions</span>
-                  <textarea
-                    name="booking_ff_instructions[]"
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  @click="removeItem('ff')"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30 ffremove"
-                  style="background: red; width: 100%"
-                >
-                  Remove
-                </button>
-              </div> -->
-              <!-- END OF FREIGHT-->
 
-              <!-- END CATEGORY FORM -->
-              <div class="clear"></div>
+						<!-- END CATEGORY FORM -->
+						<div class="clear"></div>
 
-              <div class="one-half book">
-                <a
-                  href="#"
-                  id="booking_previous_2"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30"
-                  >BACK</a
-                >
-              </div>
-              <div class="one-half book">
-                <a
-                  href="#"
-                  id="booking_next_2"
-                  @click="bookingNext2()"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30"
-                  >DONE</a
-                >
-              </div>
-            </div>
+						<div class="one-half book">
+							<a href="#" id="booking_previous_2" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30">BACK</a>
+						</div>
+						<div class="one-half book">
+							<a href="#" id="booking_next_2" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30">DONE</a>
+						</div>
 
-            <!-- STEP 3 -->
-            <div id="book_3" style="display: none">
-              <!-- PRICE -->
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Price</span>
-                <em>(GBP)</em>
-                <input
-                  v-model="form.booking_price"
-                  type="text"
-                  id="booking_price"
-                  name="booking_price"
-                  readonly
-                  required
-                />
-              </div>
+					</div>
 
-              <!-- PAYMENT -->
-              <div class="input-style input-style-1 input-required top-50">
-                <span>Payment Method</span>
-                <em>(required)</em>
-                <select
-                  id="booking_payment_method"
-                  v-model="form.booking_payment_method"
-                  @change="handleBookingPaymentMethodChange()"
-                  name="booking_payment_method"
-                  required
-                >
-                  <option value="">Please select payment method</option>
-                  <option value="paypal">Paypal</option>
-                  <option value="mobile">Mobile Money</option>
-                  <option value="bid">Leave Job for Bidding</option>
-                </select>
-              </div>
+					<!-- STEP 3 -->
+					<div id="book_3" style="display:none">
+						<!-- PRICE -->
+						<div class="input-style  input-style-1 input-required top-50">
 
-              <!-- YOUR PRICE -->
-              <div
-                class="input-style input-style-1 input-required top-50"
-                id="booking_your_price_div"
-                v-if="showBookingPriceDiv"
-              >
-                <span>Your Price</span>
-                <em>(GBP)</em>
-                <input
-                  type="number"
-                  v-model="form.booking_your_price"
-                  id="booking_your_price"
-                  name="booking_your_price"
-                />
-              </div>
+							<span>Price</span>
+							<em>(GBP)</em>
+							<input type="text" id="booking_price" name='booking_price' readonly required>
+						</div>
 
-              <div v-if="showBookingMomoDiv" id="booking_momo_div"></div>
+						<!-- PAYMENT -->
+						<div class="input-style  input-style-1 input-required top-50">
 
-              <div class="clear"></div>
+							<span>Payment Method</span>
+							<em>(required)</em>
+							<select id="booking_payment_method" name='booking_payment_method' required>
+								<option value="">Please select payment method</option>
+								<option value="paypal">Paypal</option>
+								<option value="mobile">Mobile Money</option>
+								<option value="bid">Leave Job for Bidding</option>
+							</select>
+						</div>
 
-              <div
-                class=""
-                v-if="showBookingRegistrationDiv"
-                id="booking_register_div"
-              >
-                <div class="input-style input-style-1 input-required top-50">
-                  <i class="input-icon fa fa-user font-11"></i>
-                  <span>First Name</span>
-                  <em>(required)</em>
-                  <input
-                    v-model="form.profile_edit_first_name"
-                    type="text"
-                    placeholder="First Name"
-                    id="profile_edit_first_name"
-                    name="profile_edit_first_name"
-                    required
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <i class="input-icon fa fa-user font-11"></i>
-                  <span>Last Name</span>
-                  <em>(required)</em>
-                  <input
-                    type="text"
-                    v-model="form.profile_edit_last_name"
-                    placeholder="Last Name"
-                    id="profile_edit_last_name"
-                    name="profile_edit_last_name"
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <i class="input-icon fa fa-envelope font-11"></i>
-                  <span>Email</span>
-                  <em>(required)</em>
-                  <input
-                    type="text"
-                    v-model="form.profile_edit_email"
-                    placeholder="Email"
-                    id="profile_edit_email"
-                    name="profile_edit_email"
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <i class="input-icon fa fa-phone font-11"></i>
-                  <span>Phone Number</span>
-                  <em>(required)</em>
-                  <input
-                    type="text"
-                    v-model="form.profile_edit_phone"
-                    placeholder="Phone Number"
-                    id="profile_edit_phone"
-                    name="profile_edit_phone"
-                  />
-                </div>
-                <div class="input-style input-style-1 input-required top-50">
-                  <i class="input-icon fa fa-lock font-11"></i>
-                  <span>Password</span>
-                  <em>(required)</em>
-                  <input
-                    type="password"
-                    v-model="form.profile_edit_password"
-                    placeholder="Password"
-                    id="profile_edit_password"
-                    name="profile_edit_password"
-                  />
-                </div>
-              </div>
+						<!-- YOUR PRICE -->
+						<div class="input-style  input-style-1 input-required top-50" id="booking_your_price_div" style="display:none">
+							<span>Your Price</span>
+							<em>(GBP)</em>
+							<input type="number" id="booking_your_price" name='booking_your_price'>
+						</div>
 
-              <div class="clear"></div>
+						<div id="booking_momo_div" style="display:none">
+						</div>
 
-              <div class="one-half book">
-                <a
-                  href="#"
-                  id="booking_previous_3"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30"
-                  >BACK</a
-                >
-              </div>
-              <div class="one-half book" @click="bookingNext3()">
-                <a
-                  href="#"
-                  id="booking_next_3"
-                  class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30"
-                  >CHECKOUT</a
-                >
-              </div>
-            </div>
-          </div>
-        </form>
+						<div class="clear"></div>
+						
+						<div class="" id="booking_register_div" style="display:none">
+        					<div class="input-style  input-style-1 input-required top-50">
+        						<i class="input-icon fa fa-user font-11"></i>
+        						<span>First Name</span>
+        						<em>(required)</em>
+        						<input type="text" placeholder="First Name" id="profile_edit_first_name" name='profile_edit_first_name' required>
+        					</div>
+        					<div class="input-style  input-style-1 input-required top-50">
+        						<i class="input-icon fa fa-user font-11"></i>
+        						<span>Last Name</span>
+        						<em>(required)</em>
+        						<input type="text" placeholder="Last Name" id="profile_edit_last_name" name='profile_edit_last_name'>
+        					</div>
+        					<div class="input-style  input-style-1 input-required top-50">
+        						<i class="input-icon fa fa-envelope font-11"></i>
+        						<span>Email</span>
+        						<em>(required)</em>
+        						<input type="text" placeholder="Email" id="profile_edit_email" name='profile_edit_email'>
+        					</div>
+        					<div class="input-style  input-style-1 input-required top-50">
+        						<i class="input-icon fa fa-phone font-11"></i>
+        						<span>Phone Number</span>
+        						<em>(required)</em>
+        						<input type="text" placeholder="Phone Number" id="profile_edit_phone" name='profile_edit_phone'>
+        					</div>
+        					<div class="input-style  input-style-1 input-required top-50">
+        						<i class="input-icon fa fa-lock font-11"></i>
+        						<span>Password</span>
+        						<em>(required)</em>
+        						<input type="password" placeholder="Password" id="profile_edit_password" name='profile_edit_password'>
+        					</div>
+        
+        
+        				</div>
+        				
+        				<div class="clear"></div>
+						
 
-        <div
-          class="content bottom-0"
-          id="profile_main_div_buttons"
-          style="display: none"
-        >
-          <div class="one-half book">
-            <a
-              href="#"
-              id="booking_save_button"
-              class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30"
-              >SAVE CHANGES</a
-            >
-          </div>
-          <div class="one-half book last-column">
-            <a
-              href="#"
-              id="booking_cancel_button"
-              class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30"
-              >CANCEL</a
-            >
-          </div>
-          <div class="clear"></div>
-        </div>
+						<div class="one-half book">
+							<a href="#" id="booking_previous_3" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30 top-30">BACK</a>
+						</div>
+						<div class="one-half book">
+							<a href="#" id="booking_next_3" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30">CHECKOUT</a>
+						</div>
 
-        <div class="divider divider-margins"></div>
-      </div>
-      <div
-        id="menu-navigation"
-        class="menu-box menu-transparent"
-        data-menu-type="menu-box-left"
-        data-menu-width="260"
-        data-menu-selected="nav-page-pages"
-        data-menu-load="menu-navigation.html"
-        data-menu-effect="menu-reveal"
-      ></div>
+					</div>
 
-      <div class="menu-hider"></div>
-    </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/vue@3.0.5"></script>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" src="scripts/jquery.js"></script>
-    <script type="text/javascript" src="scripts/plugins.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="scripts/custom.js?V=1" async></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
-      integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDjxuVLaH1LrBs1wh4O5_XINbK8CbXG5LI&callback=Function.prototype"></script>
-    <script src="page-book.vue.js"></script>
-  </body>
+				</div>
+
+				
+
+			</form>
+
+			<div class="content bottom-0" id="profile_main_div_buttons" style="display:none;">
+				<div class="one-half book">
+					<a href="#" id="booking_save_button" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30">SAVE CHANGES</a>
+				</div>
+				<div class="one-half book last-column">
+					<a href="#" id="booking_cancel_button" class="button button-full button-m round-small shadow-huge bg-orange1-dark bottom-30">CANCEL</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="divider divider-margins"></div>
+		</div>
+
+
+		<div id="menu-navigation"
+			 class="menu-box menu-transparent"
+			 data-menu-type="menu-box-left"
+			 data-menu-width="260"
+			 data-menu-selected="nav-page-pages"
+			 data-menu-load="menu-navigation.html"
+			 data-menu-effect="menu-reveal">
+		</div>
+
+		<div class="menu-hider"></div>
+	</div>
+
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/plugins.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script type="text/javascript" src="scripts/custom.js?V=1" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjxuVLaH1LrBs1wh4O5_XINbK8CbXG5LI&libraries=places&callback=initAutocomplete" async defer></script>
+	<script>
+		document.addEventListener("deviceready", onDeviceReady, false);
+		//document.addEventListener("deviceready", initAutocomplete, false);
+		// Cordova is ready
+
+		var logged_in_number;
+		var thisDevice;
+		var image_base = "https://jaylogistic.com/app/uploads/profile/";
+		var ajax_base = "https://jaylogistic.com/api/integration/v1/index.php/";
+		var profile_url = ajax_base + "manager/profile";
+		var make_url = ajax_base + "information/carMake";
+		var model_url = ajax_base + "information/carModel";
+		var price_url = ajax_base + "price/gen";
+		var submit_url = ajax_base + "order/submit";
+		//CAT URL
+		var fa_url = ajax_base + "information/furnitureAppliance";
+		var hr_url = ajax_base + "information/homeRemoval";
+		var ip_url = ajax_base + "information/itemParcel";
+		var mb_url = ajax_base + "information/motorbike";
+		var pd_url = ajax_base + "information/piano";
+		var ff_url = ajax_base + "information/freight";
+        var cvcurrentGroup;
+		var cvmaxGroup;
+        var facurrentGroup;
+		var famaxGroup;
+        var hrcurrentGroup;
+		var hrmaxGroup;
+        var ipcurrentGroup;
+		var ipmaxGroup;
+        var mbcurrentGroup;
+		var mbmaxGroup;
+        var pdcurrentGroup;
+		var pdmaxGroup;
+        var ffcurrentGroup;
+        var ffmaxGroup;
+        
+		function purgeData() {
+			window.localStorage.setItem('JayLogisticGen', '');
+			window.localStorage.setItem('JayLogisticStat', 0);
+		}
+
+		function onDeviceReady() {
+			var logged_in_stat = localStorage.getItem('JayLogisticStat');
+			var logged_in_number = localStorage.getItem('JayLogisticGen');
+			
+			thisDevice = device.model + ' ' + device.platform;
+            if(thisDevice.includes('Safari') || thisDevice.includes('iPhone') || thisDevice.includes('iOS')) {
+                if(parseFloat(device.version) > 10) {
+                    $('#notification-1').show();
+                }
+            }
+            
+            $('.notification-style').show();
+
+			if (logged_in_stat == 1) {
+				//console.log('Logged In');
+				initAutocomplete();
+				profile(logged_in_number);
+				//userOrders(logged_in_number);
+			}
+
+			if (logged_in_stat == 0 || logged_in_number == undefined || logged_in_number === null || logged_in_number === '') {
+				purgeData();
+				//window.location.href = "page-login-2.html";
+				//console.log('Not Logged In');
+			}
+			
+			setTimeout(function() {
+    	        var container = document.getElementsByClassName('pac-container')[0];
+    	        console.log(container);
+    	        container.addEventListener('touchstart', function(e) {
+    	            e.stopImmediatePropagation();
+    	            setTimeout(function(){console.log('Selected Location');document.activeElement.blur();},300);
+    	            
+    	        });
+    	    }, 300);
+    	    
+    	    setTimeout(function() {
+    	        var container = document.getElementsByClassName('pac-container')[1];
+    	        console.log(container);
+    	        container.addEventListener('touchstart', function(e) {
+    	            e.stopImmediatePropagation();
+    	            setTimeout(function(){console.log('Selected Location');document.activeElement.blur();},300);
+    	            
+    	        });
+    	    }, 300);
+
+		}
+
+		function profile(logged_in_number) {
+			if (logged_in_number) {
+				$.ajax({
+					url: profile_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+					data: { number: logged_in_number },
+				}).done(function (res) {
+					//console.log(res);
+					//IF SUCCESSFUL
+					if (res.usr.id.length > 0) {
+						$('#client_id').val(res.usr.id);
+					}
+
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+			} else {
+				swal('Something went wrong, please try again.');
+			}
+		}
+
+		$("#booking_category").on("change", function () {
+            swal('Information' ,'Categories Loading' ,'info');
+			var val = $("#booking_category").val();
+			//var allDivs = $("#booking-category-cv, #booking-category-fa,#booking-category-hr,#booking-category-ip,#booking-category-mb,#booking-category-pd,#booking-category-ff");
+			//allDivs.hide();
+
+            // $('[class*="cvfieldGroup"],[class*="fafieldGroup"],[class*="hrfieldGroup"],[class*="ipfieldGroup"]').hide();
+            //$('[class*="mbfieldGroup"],[class*="pdfieldGroup"],[class*="fffieldGroup"]').hide();
+            
+			// AJAX FOR CATEGORIES
+            if (val == 'cv') {
+                var allDivs = $("#booking-category-fa,#booking-category-hr,#booking-category-ip,#booking-category-mb,#booking-category-pd,#booking-category-ff");
+                allDivs.hide();
+                $('[class*="fafieldGroup"],[class*="hrfieldGroup"],[class*="ipfieldGroup"]').hide();
+                $('[class*="mbfieldGroup"],[class*="pdfieldGroup"],[class*="fffieldGroup"]').hide();
+
+				$.ajax({
+                    url: make_url,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                }).done(function (data) {
+                    ////console.log(data);
+                    //IF SUCCESSFUL
+                    var options = '';
+                    $('#booking_car_manufacturer').html(options);
+                    for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['id'] + '">' + data[x]['title'] + '</option>';
+                    }
+                    //POPULATE DROPDOWN
+                    $('#booking_car_manufacturer').html(options);
+                    $('#booking-category-cv').show();
+
+                    // POPULATE MODEL
+                    var ini_val = $('#booking_car_manufacturer').val();
+                    $('#booking_car_model').val(); //val = 1;
+                    $.ajax({
+                        url: model_url + '/' + ini_val,
+                        method: "POST",
+                        dataType: 'json',
+                        cache: false,
+                    }).done(function (data) {
+                        var options = '';
+                        $('#booking_car_model').html(options);
+                        for (var x = 0; x < data.length; x++) {
+                            options += '<option value="' + data[x]['id'] + '">' + data[x]['title'] + '</option>';
+                        }
+                        $('#booking_car_model').html(options);
+                    }).fail(function (jqXHR, textStatus) {
+                        swal('Something went wrong, please try again.');
+
+                    });
+
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+
+                //group add limit
+                cvmaxGroup = 10;
+                cvcurrentGroup = 1;
+                //add more fields group
+                $(".cvaddMore").click(function () {
+                    if ($('body').find('.cvfieldGroup').length < cvmaxGroup) {
+                        var fieldHTML = '<div class="cvfieldGroup' + cvcurrentGroup + '" id="cvfieldGroup' + cvcurrentGroup + '">' + $(".cvfieldGroupCopy").html() + '</div>';
+                        $('body').find('.cvfieldGroup:last').after(fieldHTML);
+                        
+                        cvcurrentGroup++;
+                        
+                    } else {
+                        swal('Maximum ' + cvmaxGroup + ' items allowed.');
+                    }
+                });
+
+            }
+
+            
+			/** FURNITURE AND APPLICANCES **/
+			if (val == 'fa') {
+				var allDivs = $("#booking-category-cv,#booking-category-hr,#booking-category-ip,#booking-category-mb,#booking-category-pd,#booking-category-ff");
+				allDivs.hide();
+                $('[class*="cvfieldGroup"],[class*="hrfieldGroup"],[class*="ipfieldGroup"]').hide();
+                $('[class*="mbfieldGroup"],[class*="pdfieldGroup"],[class*="fffieldGroup"]').hide();
+
+				$.ajax({
+					url: fa_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (data) {
+					//console.log(data);
+					//IF SUCCESSFUL
+					var options = '';
+					$('#booking_fa_item').html(options);
+					for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+					}
+					//POPULATE DROPDOWN
+					$('#booking_fa_item').html(options);
+					$('#booking-category-fa').show();
+					$('#booking_fa_item_search').selectize({
+                          sortField: 'text',
+                          highlight: false,
+                          allowEmptyOption: true,
+                          create: true
+                      });
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+
+                //group add limit
+                famaxGroup = 10;
+                facurrentGroup = 1;
+                //add more fields group
+                $(".faaddMore").click(function () {
+                    if ($('body').find('.fafieldGroup').length < famaxGroup) {
+                        var did = 'fafieldGroup' + facurrentGroup;
+                        var fieldHTML = '<div class="fafieldGroup' + facurrentGroup + '" id="fafieldGroup' + facurrentGroup + '">' + $(".fafieldGroupCopy").html() + '</div>';
+                        $('body').find('.fafieldGroup:last').after(fieldHTML);
+                        /*$('body').find('[id=' + did + ']').find('[id=]').selectize({
+                          sortField: 'text',
+                          highlight: false
+                        });*/
+                        facurrentGroup++;
+                        //emulate click
+                    } else {
+                        swal('Maximum ' + famaxGroup + ' items allowed.');
+                    }
+                });
+
+			}
+
+			/** HOME REMOVALS **/
+			if (val == 'hr') {
+				var allDivs = $("#booking-category-cv,#booking-category-fa,#booking-category-ip,#booking-category-mb,#booking-category-pd,#booking-category-ff");
+				allDivs.hide();
+                $('[class*="fafieldGroup"],[class*="cvfieldGroup"],[class*="ipfieldGroup"]').hide();
+                $('[class*="mbfieldGroup"],[class*="pdfieldGroup"],[class*="fffieldGroup"]').hide();
+
+				$.ajax({
+					url: hr_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (data) {
+					//console.log(data);
+					//IF SUCCESSFUL
+					var options = '';
+					$('#booking_hr_item').html(options);
+					for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+					}
+					//POPULATE DROPDOWN
+					$('#booking_hr_item').html(options);
+					$('#booking-category-hr').show();
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+
+                //group add limit
+                hrmaxGroup = 10;
+                hrcurrentGroup = 1;
+                //add more fields group
+                $(".hraddMore").click(function () {
+                    if ($('body').find('.hrfieldGroup').length < hrmaxGroup) {
+                        var fieldHTML = '<div class="hrfieldGroup' + hrcurrentGroup + '" id="hrfieldGroup' + hrcurrentGroup + '">' + $(".hrfieldGroupCopy").html() + '</div>';
+                        $('body').find('.hrfieldGroup:last').after(fieldHTML);
+                        hrcurrentGroup++;
+                        //emulate click
+                    } else {
+                        swal('Maximum ' + hrmaxGroup + ' items allowed.');
+                    }
+                });
+			}
+
+			/** ITEMS AND PARCELS**/
+			if (val == 'ip') {
+				var allDivs = $("#booking-category-cv,#booking-category-fa,#booking-category-hr,#booking-category-mb,#booking-category-pd,#booking-category-ff");
+				allDivs.hide();
+                $('[class*="fafieldGroup"],[class*="hrfieldGroup"],[class*="cvfieldGroup"]').hide();
+                $('[class*="mbfieldGroup"],[class*="pdfieldGroup"],[class*="fffieldGroup"]').hide();
+
+				$.ajax({
+					url: hr_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (data) {
+					//console.log(data);
+					//IF SUCCESSFUL
+					var options = '';
+					$('#booking_ip_item').html(options);
+					for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+					}
+					//POPULATE DROPDOWN
+					$('#booking_ip_item').html(options);
+					$('#booking-category-ip').show();
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+
+                //group add limit
+                ipmaxGroup = 10;
+                ipcurrentGroup = 1;
+                //add more fields group
+                $(".ipaddMore").click(function () {
+                    if ($('body').find('.ipfieldGroup').length < ipmaxGroup) {
+                        var fieldHTML = '<div class="ipfieldGroup' + ipcurrentGroup + '" id="ipfieldGroup' + ipcurrentGroup + '">' + $(".ipfieldGroupCopy").html() + '</div>';
+                        $('body').find('.ipfieldGroup:last').after(fieldHTML);
+                        ipcurrentGroup++;
+                        //emulate click
+                    } else {
+                        swal('Maximum ' + ipmaxGroup + ' items allowed.');
+                    }
+                });
+			}
+
+			/** MOTORBIKE**/
+			if (val == 'mb') {
+				var allDivs = $("#booking-category-cv,#booking-category-fa,#booking-category-hr,#booking-category-ip,#booking-category-pd,#booking-category-ff");
+				allDivs.hide();
+                $('[class*="fafieldGroup"],[class*="hrfieldGroup"],[class*="ipfieldGroup"]').hide();
+				$('[class*="cvfieldGroup"],[class*="pdfieldGroup"],[class*="fffieldGroup"]').hide();
+
+				$.ajax({
+					url: mb_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (data) {
+					//console.log(data);
+					//IF SUCCESSFUL
+					var options = '';
+					$('#booking_mb_item').html(options);
+					for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+					}
+					//POPULATE DROPDOWN
+					$('#booking_mb_item').html(options);
+					$('#booking-category-mb').show();
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+
+                //group add limit
+                mbmaxGroup = 10;
+                mbcurrentGroup = 1;
+                //add more fields group
+                $(".mbaddMore").click(function () {
+                    if ($('body').find('.mbfieldGroup').length < mbmaxGroup) {
+                        var fieldHTML = '<div class="mbfieldGroup' + mbcurrentGroup + '" id="mbfieldGroup' + mbcurrentGroup + '">' + $(".mbfieldGroupCopy").html() + '</div>';
+                        $('body').find('.mbfieldGroup:last').after(fieldHTML);
+                        mbcurrentGroup++;
+                        //emulate click
+                    } else {
+                        swal('Maximum ' + mbmaxGroup + ' items allowed.');
+                    }
+                });
+			}
+
+			/** PIANO DELIVERY**/
+			if (val == 'pd') {
+				var allDivs = $("#booking-category-cv,#booking-category-fa,#booking-category-hr,#booking-category-ip,#booking-category-mb,#booking-category-ff");
+				allDivs.hide();
+                $('[class*="fafieldGroup"],[class*="hrfieldGroup"],[class*="ipfieldGroup"]').hide();
+				$('[class*="mbfieldGroup"],[class*="cvfieldGroup"],[class*="fffieldGroup"]').hide();
+
+				$.ajax({
+					url: pd_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (data) {
+					//console.log(data);
+					//IF SUCCESSFUL
+					var options = '';
+					$('#booking_pd_item').html(options);
+					for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+					}
+					//POPULATE DROPDOWN
+					$('#booking_pd_item').html(options);
+					$('#booking-category-pd').show();
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+
+                //group add limit
+                pdmaxGroup = 10;
+                pdcurrentGroup = 1;
+                //add more fields group
+                $(".pdaddMore").click(function () {
+                    if ($('body').find('.pdfieldGroup').length < pdmaxGroup) {
+                        var fieldHTML = '<div class="pdfieldGroup' + pdcurrentGroup + '" id="pdfieldGroup' + pdcurrentGroup + '">' + $(".pdfieldGroupCopy").html() + '</div>';
+                        $('body').find('.pdfieldGroup:last').after(fieldHTML);
+                        pdcurrentGroup++;
+                        //emulate click
+                    } else {
+                        swal('Maximum ' + pdmaxGroup + ' items allowed.');
+                    }
+                });
+			}
+
+			/** FREIGHT FORWARD **/
+			if (val == 'ff') {
+				var allDivs = $("#booking-category-cv,#booking-category-fa,#booking-category-hr,#booking-category-ip,#booking-category-mb,#booking-category-pd");
+				allDivs.hide();
+                $('[class*="fafieldGroup"],[class*="hrfieldGroup"],[class*="ipfieldGroup"]').hide();
+                $('[class*="mbfieldGroup"],[class*="pdfieldGroup"],[class*="cvfieldGroup"]').hide();
+
+				$.ajax({
+					url: ff_url,
+					method: "POST",
+					dataType: 'json',
+					cache: false,
+				}).done(function (data) {
+					//console.log(data);
+					//IF SUCCESSFUL
+					var options = '';
+					$('#booking_ff_item').html(options);
+					for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+					}
+					//POPULATE DROPDOWN
+					$('#booking_ff_item').html(options);
+					$('#booking-category-ff').show();
+				}).fail(function (jqXHR, textStatus) {
+					swal('Something went wrong, please try again.');
+
+				});
+                //group add limit
+                ffmaxGroup = 10;
+                ffcurrentGroup = 1;
+                //add more fields group
+                $(".ffaddMore").click(function () {
+                    if ($('body').find('.fffieldGroup').length < ffmaxGroup) {
+                        var fieldHTML = '<div class="fffieldGroup' + ffcurrentGroup + '" id="fffieldGroup' + ffcurrentGroup + '">' + $(".fffieldGroupCopy").html() + '</div>';
+                        $('body').find('.fffieldGroup:last').after(fieldHTML);
+                        ffcurrentGroup++;
+                        //emulate click
+                    } else {
+                        swal('Maximum ' + ffmaxGroup + ' items allowed.');
+                    }
+                });
+			}
+
+
+
+			//END OF ALL PARENT AJAX FROM CATEGORY
+		});
+
+
+
+		// CARS AND VEHICLES
+        /** MODEL  AND MANUFACUER FOR CARS AND VEHICLES**/
+        $("#booking_car_manufacturer").on("change", function () {
+            //var make_val = 1;
+
+            var make_val = $("#booking_car_manufacturer").val();
+            if (make_val != null) {
+
+                $.ajax({
+                    url: model_url + '/' + make_val,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+
+                }).done(function (data) {
+                    //console.log(data);
+                    //IF SUCCESSFUL
+                    var options = '';
+                    $('#booking_car_model').html(options);
+                    // EMPTY DROP DOWN
+
+                    for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['id'] + '">' + data[x]['title'] + '</option>';
+                    }
+                    //POPULATE DROPDOWN
+                    $('#booking_car_model').html(options);
+
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+
+            }
+
+            // END AJAX
+        })
+        
+        
+        //remove fields group
+        function removeItem(event) {
+            var remove = $(event).parent().remove();
+            if(cvcurrentGroup < 0) { cvcurrentGroup = 0; }
+            if(facurrentGroup < 0) { facurrentGroup = 0; }
+            if(hrcurrentGroup < 0) { hrcurrentGroup = 0; }
+            if(ipcurrentGroup < 0) { ipcurrentGroup = 0; }
+            if(mbcurrentGroup < 0) { mbcurrentGroup = 0; }
+            if(pdcurrentGroup < 0) { pdcurrentGroup = 0; }
+            if(ffcurrentGroup < 0) { ffcurrentGroup = 0; }
+            
+            if(remove){ 
+                cvcurrentGroup--; 
+                facurrentGroup--;
+                hrcurrentGroup--;
+                ipcurrentGroup--;
+                mbcurrentGroup--;
+                pdcurrentGroup--;
+                ffcurrentGroup--;
+                swal('Success!','Item Removed','success');
+            }
+
+        };
+        
+        function selectMe(event) {
+            $(event).selectize({
+              sortField: 'text',
+              highlight: false,
+              allowEmptyOption: true,
+              create: true
+            });
+        }
+
+        function otherDescriptionDisplay(event) {
+            var other_val = $(event).val();
+            //console.log(other_val);
+            if(other_val == 'Other' || other_val == 'other') {
+                swal('Information!','If you still cannot find your item, You can use the search feature below','info');
+            }
+        }
+
+        function manufacturerLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_car_model");
+
+            $.ajax({
+                url: make_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['id'] + '">' + data[x]['title'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+            })
+
+            var make_val = selector.val();
+            if (make_val == null) {
+                make_val = 1;
+            }
+            if (selector != null) {
+                $.ajax({
+                    url: model_url + '/' + make_val,
+                    method: "POST",
+                    dataType: 'json',
+                    cache: false,
+                }).done(function (data) {
+                    var options = '';
+                    modelSelector.html(options);
+                    for (var x = 0; x < data.length; x++) {
+                        options += '<option value="' + data[x]['id'] + '">' + data[x]['title'] + '</option>';
+                    }
+                    modelSelector.html(options);
+                }).fail(function (jqXHR, textStatus) {
+                    swal('Something went wrong, please try again.');
+
+                });
+
+            }
+
+        }
+
+        function manufacturerChange(event) {
+            var modelSelector = $(event).parent().parent().find('.model_list');
+
+            var make_val = $(event).val();
+            //   if (selector != null) {
+            $.ajax({
+                url: model_url + '/' + make_val,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                modelSelector.html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['id'] + '">' + data[x]['title'] + '</option>';
+                }
+                modelSelector.html(options);
+            }).fail(function (jqXHR, textStatus) {
+                swal('Something went wrong, please try again.');
+
+            });
+
+            //   }
+
+        }
+
+		/*** FURNITURE AND APPLIANCES *****/
+        function faLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_fa_item");
+            
+            $.ajax({
+                url: fa_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['title'] + '">' + data[x]['name'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                
+            })
+
+		}
+
+        /*** HOME REMOVALES *****/
+        function hrLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_hr_item");
+
+            $.ajax({
+                url: hr_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['title'] + '">' + data[x]['name'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+            })
+
+		}
+
+        /*** ITEMS AND PARCELS *****/
+        function ipLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_ip_item");
+
+            $.ajax({
+                url: ip_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+            })
+
+		}
+
+        /*** MOTORBIKES *****/
+        function mbLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_mb_item");
+
+            $.ajax({
+                url: mb_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+            })
+
+		}
+
+        /*** PIANO DELIVERY *****/
+        function pdLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_pd_item");
+
+            $.ajax({
+                url: pd_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+            })
+
+		}
+
+        /*** FREIGHT FORWARD *****/
+        function ffLoad(event) {
+            var current = event.id;
+            var parent1 = event.parentNode.className;
+            var parent2 = event.parentNode.parentNode.className;
+            var selector = $("." + parent2 + "> div > select#" + current + "");
+            var modelSelector = $("." + parent2 + "> div > select#" + current + "").closest("#booking_ff_item");
+
+            $.ajax({
+                url: ff_url,
+                method: "POST",
+                dataType: 'json',
+                cache: false,
+            }).done(function (data) {
+                var options = '';
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+                for (var x = 0; x < data.length; x++) {
+                    options += '<option value="' + data[x]['name'] + '">' + data[x]['name'] + '</option>';
+                }
+                $("." + parent2 + "> div > select#" + current + "").html(options);
+            })
+
+        }
+        
+        function closeMe(div){
+            document.getElementById(div).style.display = 'none';
+        }
+
+		
+		// PRICE AND GATEWAY
+		$("#booking_next_2").on("click", function () {
+			//swal('Calculating..');
+			var booking_moving_from = $('#booking_moving_from').val();
+			var booking_moving_to = $('#booking_moving_to').val();
+
+			if (booking_moving_from == null || booking_moving_to == null) {
+				swal('You have not entered a location, please do so');
+				return false;
+			}
+            
+			$.ajax({
+				url: price_url,
+				method: "POST",
+				dataType: 'json',
+				cache: false,
+				data: $("form").serialize(),
+			}).done(function (data) {
+				//console.log(data);
+				$('#booking_price').val(data.price);
+
+			}).fail(function (jqXHR, textStatus) {
+				swal('Something went wrong, please try again.');
+
+			});
+
+		})
+
+		$("#booking_next_3").on("click", function () {
+			var from = $("#booking_moving_from").val();
+			var to = $("#booking_moving_to").val();
+			var category = $("#booking_category").val();
+			var logged_in_stat = localStorage.getItem('JayLogisticStat');
+            var profile_edit_first_name = $("#profile_edit_first_name").val();
+            var profile_edit_last_name = $("#profile_edit_last_name").val();
+            var profile_edit_phone = $("#profile_edit_phone").val();
+            var profile_edit_password = $("#profile_edit_password").val();
+            
+			if (logged_in_stat == 0) {
+				swal('Create an account to proceed');
+				$("#booking_register_div").show();
+			}
+
+			if (from.length > 0 && to.length > 0 && category.length > 0) {
+				if (logged_in_stat == 0 && profile_edit_first_name.length > 0 && profile_edit_last_name.length > 0 && profile_edit_phone.length > 0 && profile_edit_password.length > 0) {
+				    submitForm();
+				} else if(logged_in_stat == 1){
+				    submitForm();
+				}
+		
+			} else {
+				swal('You have not completed the form...');
+			}
+		})
+
+
+		$("#booking_payment_method").on("change", function () {
+			var val = $("#booking_payment_method").val();
+			if (val == 'bid') {
+				$("#booking_momo_div").hide();
+				$("#booking_your_price_div").show();
+			} else if (val == 'mobile') {
+				$("#booking_your_price_div").hide();
+				$("#booking_momo_div").show();
+			}
+			else {
+				$("#booking_momo_div").hide();
+				$("#booking_your_price_div").hide();
+			}
+
+
+		})
+
+		function submitForm() {
+			$.ajax({
+				url: submit_url,
+				method: "POST",
+				dataType: 'json',
+				cache: false,
+				data: $("form").serialize(),
+			}).done(function (data) {
+
+				var payment_url;
+				var payment_method = $('#booking_payment_method').val();
+
+				if (payment_method == 'paypal') {
+					swal("Success!", "Redirecting to Payment", "success");
+					payment_url = 'https://jaylogistic.com/app/extend/paypal?i=' + data.return_id + "&a=" + data.return_amount;
+					window.open(payment_url, '_blank');
+					window.location.href = "page-profile.html"
+				} else if (payment_method == 'mobile') {
+					swal("Success!", "Redirecting to Payment", "success");
+					var logged_in_number = localStorage.getItem('JayLogisticGen');
+					payment_url = 'https://jaylogistic.com/app/paystack/pay/single/' + data.return_amount + "/" + logged_in_number + "/" + data.return_id;
+					window.open(payment_url, '_blank');
+					window.location.href = "page-profile.html"
+				} else if (payment_method == 'bid') {
+					swal("Success!", "Booking Successful!", "success");
+					window.location.href = 'page-profile.html'
+				}
+
+
+
+			}).fail(function (jqXHR, textStatus) {
+				swal('Something went wrong, please try again.');
+
+			});
+
+		}
+
+		/**** MAAPS CODE ***/
+
+		var placeSearch, autocompletefrom, autocompleteto, coords, autocomplete, pricebox, autocompletefrombox, autocompletetobox, position;
+		var from_location, to_location, rider, riderLoc, item_from, item_to, markerA, markerB, markerC, driver_lat, driver_lang, delivery_status;
+
+		function initAutocomplete() {
+			// Create the autocomplete object, restricting the search to geographical
+			// location types.
+			autocompletefrom = new google.maps.places.Autocomplete(
+				(document.getElementById('booking_moving_from')),
+				{ types: ['geocode'] });
+
+			autocompleteto = new google.maps.places.Autocomplete(
+				(document.getElementById('booking_moving_to')),
+				{ types: ['geocode'] });
+		}
+		
+		function geolocatevalue(event) {
+		    console.log($(event));
+		    console.log($(event).val());
+		}
+
+		// Bias the autocomplete object to the user's geographical location,
+		function geolocatefrom() {
+			var geolocationfrom = {
+				lat: position.coords.latitude,
+				lng: position.coords.longitude
+			};
+			var circlefrom = new google.maps.Circle({
+				center: geolocationfrom,
+				radius: position.coords.accuracy
+			});
+			autocomplete.setBounds(circlefrom.getBounds());
+
+		}
+
+		function geolocateto() {
+			var geolocationto = {
+				lat: position.coords.latitude,
+				lng: position.coords.longitude
+			};
+			var circleto = new google.maps.Circle({
+				center: geolocationto,
+				radius: position.coords.accuracy
+			});
+			autocomplete.setBounds(circleto.getBounds());
+		}
+		
+		 var input1 = document.getElementById('booking_moving_from');
+         var input2 = document.getElementById('booking_moving_to');
+        
+        $(document).on({
+            'DOMNodeInserted': function() {
+                $('.pac-item, .pac-item span', this).addClass('needsclick');
+            }
+        }, '.pac-container');
+
+	</script>
+
+</body>
 </html>
